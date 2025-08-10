@@ -20,14 +20,14 @@ const SocialCardsContainer: FC<SocialCardsContainerProps> = ({ socialItems }) =>
   }
 
   return (
-    <div className="w-full max-w-3xl border-x border-neutral-200">
+    <div className="w-full max-w-3xl border-x border-border">
       {rows.map((row, rowIdx) => (
         <div
           key={rowIdx}
-          className="grid grid-cols-2 gap-4 border-y my-4 border-neutral-200 mx-[-9999px] px-[9999px]"
+          className="grid grid-cols-2 gap-4 border-y my-4 border-border mx-[-9999px] px-[9999px]"
         >
           {row.map((item) => (
-            <div key={item.id} className="border-x border-neutral-200">
+            <div key={item.id} className="border-x border-border">
               <SocialCard
                 userId={item.userId}
                 icon={item.icon}
@@ -37,7 +37,7 @@ const SocialCardsContainer: FC<SocialCardsContainerProps> = ({ socialItems }) =>
               />
             </div>
           ))}
-          {row.length < 2 && <div className="border-x border-neutral-200" />} {/* empty cell if odd count */}
+          {row.length < 2 && <div className="border-x border-border" />} {/* empty cell if odd count */}
         </div>
       ))}
     </div>

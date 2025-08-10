@@ -44,14 +44,14 @@ const BioSection = () => {
   ];
 
   return (
-    <section className="p-4 max-w-3xl w-full border-x border-neutral-200">
+    <section className="p-4 max-w-3xl w-full border-x border-border">
       <ul className="space-y-2">
         {bioLineItems.map((item) => (
           <li key={item.id} className="flex items-center gap-2">
             <div className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-mute dark:inset-shadow-[1px_1px_1px,0px_0px_2px] dark:inset-shadow-white/15">
               {item.icon}
             </div>
-            <span className="text-sm font-mono">{item.text}</span>
+            <span className="text-sm font-mono text-foreground">{item.text}</span>
           </li>
         ))}
       </ul>

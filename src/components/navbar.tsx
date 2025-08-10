@@ -1,19 +1,20 @@
 "use client";
 
-import { Github, Sun } from "lucide-react";
+import { Github, MoonStar, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useTheme } from "@/contexts/theme-context";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [showLogo, setshowLogo] = useState(false)
+  const [showLogo, setshowLogo] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
-      setshowLogo(window.scrollY > 50)
-      console.log(window.scrollY)
+      setshowLogo(window.scrollY > 156)
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,13 +27,17 @@ const Navbar = () => {
     { id: 3, title: "Projects", href: "/" },
   ];
 
+  const handleThemeToggle = () => {
+    toggleTheme();
+  };
+
   return (
     <nav
-      className={`w-full inset-0 sticky top-0 z-50 bg-white flex justify-center border-y border-neutral-200 h-12 transition-shadow duration-300 ${
+      className={`w-full inset-0 sticky top-0 z-50 bg-background flex justify-center border-y border-border h-12 transition-shadow duration-300 ${
         scrolled ? "shadow-md" : ""
       }`}
     >
-      <div className="max-w-3xl w-full border-x border-neutral-200 flex items-center justify-between  px-2 font-mono text-neutral-600 font-medium overflow-y-hidden">
+      <div className="max-w-3xl w-full border-x border-border flex items-center justify-between px-2 font-mono text-foreground font-medium overflow-y-hidden">
         {/* logo */}
         <div
           className={`transition-all duration-300 transform ${
@@ -50,19 +55,24 @@ const Navbar = () => {
             <Link
               href={item.href}
               key={item.id}
-              className="hover:text-neutral-900 transition-colors"
+              className="hover:text-foreground/80 transition-colors"
             >
               {item.title}
             </Link>
           ))}
 
           {/* github and theme mode icon */}
-          <div className="border border-neutral-200 rounded-full p-2">
+          <div className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer">
             <Github size={16} />
           </div>
-          <div className="border border-neutral-200 rounded-full p-2">
-            <Sun size={16} />
-          </div>
+          <button
+            onClick={handleThemeToggle}
+            className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer"
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            type="button"
+          >
+            {theme === 'light' ? <MoonStar size={16} /> : <Sun size={16} />}
+          </button>
         </div>
       </div>
     </nav>

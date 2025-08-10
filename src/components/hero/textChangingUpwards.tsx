@@ -19,7 +19,7 @@ const TextChangingUpwards: FC<TextChangingUpwardsProps> = ({ texts }) => {
   }, [texts.length]);
 
   return (
-    <div className="text-[#71717B] text-sm overflow-hidden">
+    <div className="text-muted-foreground text-sm overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.span
           key={texts[index]}
