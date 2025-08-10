@@ -1,6 +1,7 @@
 import React from 'react'
 import DiagonalLineGradientBgFull from '../hero/diagonalLineGradientBgFull'
 import StackSection from './stackSection'
+import ExperienceSection from './experienceSection'
 
 const AboutSection = () => {
   return (
@@ -17,14 +18,14 @@ const AboutSection = () => {
           <p>
             With experience in JavaScript, React, Next.js, Python, FastAPI, and cloud
             platforms like AWS and Vercel, I specialize in delivering end-to-end features
-            from ideation to deployment. I'm constantly exploring new technologies, from
+            from ideation to deployment. I&apos;m constantly exploring new technologies, from
             UI/UX design to system architecture, and love translating raw ideas into
             polished, functional products.
           </p>
 
           <p>
             My projects span productivity tools, creative experiments, and open-source
-            contributions. I'm currently building <strong>FlipsideBrain</strong> — a
+            contributions. I&apos;m currently building <strong>FlipsideBrain</strong> — a
             productivity and self-growth platform featuring tools like website blockers,
             browser activity tracking, and cross-device sync. I also enjoy working on
             personal brand content, mobile apps, and hobby projects that push my creative
@@ -32,16 +33,18 @@ const AboutSection = () => {
           </p>
 
           <p>
-            Beyond coding, I'm deeply invested in learning cinematography, music
+            Beyond coding, I&apos;m deeply invested in learning cinematography, music
             production, and art, treating life like a game of leveling up my skills every
             day.
           </p>
 
           <p>
-            Let's connect and create something remarkable together!
+            Let&apos;s connect and create something remarkable together!
           </p>
         </div>
       </div>
+      <DiagonalLineGradientBgFull />
+      <ExperienceSection />
       <DiagonalLineGradientBgFull />
       <StackSection />
       <DiagonalLineGradientBgFull />

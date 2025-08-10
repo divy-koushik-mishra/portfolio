@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/theme-context";
+import FooterSection from "@/components/footer";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+          <FooterSection />
         </ThemeProvider>
       </body>
     </html>

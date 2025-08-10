@@ -78,7 +78,7 @@ const Navbar = () => {
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             type="button"
           >
-            {theme === 'light' ? <MoonStar size={16} /> : <Sun size={16} />}
+            {theme === 'dark' ? <MoonStar size={16} /> : <Sun size={16} />}
           </button>
         </div>
       </div>
