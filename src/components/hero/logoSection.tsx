@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { ContextMenu } from "../ui/context-menu";
@@ -6,14 +7,17 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@radix-ui/react-context-menu";
+import { useTheme } from "@/contexts/theme-context";
 
 const LogoSection = () => {
+  const { theme } = useTheme();
+
   return (
     <section className="max-w-3xl border-x border-border w-full aspect-2/1 sm:aspect-3/1 bg-bg-secondary bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-foreground)]/5">
       <ContextMenu>
         <ContextMenuTrigger className="w-full h-full flex items-center justify-center">
           <Image
-            src={"/dk-pixelated.svg"}
+            src={theme === 'dark' ? "/dk-pixelated-white.svg" : "/dk-pixelated.svg"}
             height={64}
             width={128}
             alt="'hero-logo"

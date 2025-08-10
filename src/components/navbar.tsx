@@ -46,7 +46,13 @@ const Navbar = () => {
               : "opacity-0 -translate-y-4 pointer-events-none"
           }`}
         >
-          <Image src="/dk-pixelated.svg" height={32} width={32} alt="Logo" className="h-6 w-auto" />
+          <Image 
+            src={theme === 'dark' ? "/dk-pixelated-white.svg" : "/dk-pixelated.svg"} 
+            height={32} 
+            width={32} 
+            alt="Logo" 
+            className="h-6 w-auto" 
+          />
         </div>
 
         {/* menu items */}
