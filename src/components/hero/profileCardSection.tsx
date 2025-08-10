@@ -41,12 +41,12 @@ const ProfileCardSection = () => {
             <span className="hidden dark:inline">text-foreground</span> font-medium
           </div>
         </div>
-        <div className="bg-card border-y border-b border-border w-full">
+        <div className=" border-y border-b border-border w-full">
           <div className="text-3xl font-semibold px-4 py-1 flex items-center relative w-fit text-card-foreground">
             Divy Koushik Mishra <VerifiedIcon />{" "}
           </div>
         </div>
-        <div className="bg-card px-4 py-1">
+        <div className=" px-4 py-1">
             <TextChangingUpwards texts={professionalTitles} />
         </div>
       </div>

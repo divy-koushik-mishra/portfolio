@@ -33,11 +33,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full inset-0 sticky top-0 z-50 bg-background flex justify-center border-y border-border h-12 transition-shadow duration-300 ${
+      className={`w-full inset-0 sticky top-0 z-50 bg-background flex justify-center border-y border-border transition-shadow duration-300 ${
         scrolled ? "shadow-md" : ""
       }`}
     >
-      <div className="max-w-3xl w-full border-x border-border flex items-center justify-between px-2 font-mono text-foreground font-medium overflow-y-hidden">
+      <div className="border-t mt-2 border-border w-full flex justify-center h-12">
+      <div className="max-w-3xl w-full border-x  border-border flex items-center justify-between px-2 font-mono text-foreground font-medium overflow-y-hidden">
         {/* logo */}
         <div
           className={`transition-all duration-300 transform ${
@@ -80,6 +81,7 @@ const Navbar = () => {
             {theme === 'light' ? <MoonStar size={16} /> : <Sun size={16} />}
           </button>
         </div>
+      </div>
       </div>
     </nav>
   );

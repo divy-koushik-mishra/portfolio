@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body
-        className={`${geistMono.variable} antialiased selection:bg-black selection:text-neutral-200`}
+        className={`${geistMono.variable} antialiased selection:bg-foreground selection:text-background`}
       >
         <ThemeProvider>
           <Navbar />
