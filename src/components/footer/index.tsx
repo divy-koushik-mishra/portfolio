@@ -3,11 +3,11 @@ import React from 'react'
 const FooterSection = () => {
   return (
     <footer className="w-full bottom-0 border-border border-t flex flex-col items-center bg-background">
-        <div className="h-20 w-full max-w-3xl border-x border-border font-mono flex items-center flex-col justify-center text-mute-foreground">
+        <div className="h-20 px-4 w-full max-w-3xl border-x border-border font-mono flex items-center flex-col justify-center text-mute-foreground">
             <p className="text-sm">
                 Inspired by <a href="https://chanhdai.com/" target="_blank" rel="noopener noreferrer">chanhdai.com</a>
             </p>
-            <p className="text-sm">
+            <p className="text-sm text-center">
                 Built by <a href="https://www.linkedin.com/in/divy-koushik-mishra" target="_blank" rel="noopener noreferrer">Divy Koushik Mishra.</a> The source code is availabe on <span className="font-medium underline">GitHub.com</span>
             </p>
         </div>
