@@ -14,48 +14,66 @@ interface TechCategory {
 const techStack: TechCategory[] = [
   {
     name: "Frontend Development",
-    description: "Building responsive and interactive user interfaces",
-    technologies: ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "Redux", "React Query"],
+    description: "Building high-performance, responsive, and interactive web applications",
+    technologies: [
+      "React", "Next.js App Router", "TypeScript", "JavaScript",
+      "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "Zustand", "React Query"
+    ],
     color: "from-blue-500/20 via-cyan-500/20 to-blue-600/20",
     icon: <Code2 size={20} />,
     proficiency: 5
   },
   {
     name: "Backend & APIs",
-    description: "Server-side development and API design",
-    technologies: ["Node.js", "Python", "FastAPI", "Express.js", "PostgreSQL", "MongoDB", "Redis", "GraphQL", "REST APIs", "JWT"],
+    description: "Designing and developing scalable server-side applications and APIs",
+    technologies: [
+      "Node.js", "Python", "FastAPI", "Express.js", "PostgreSQL",
+      "MongoDB", "Prisma", "tRPC", "REST APIs", "JWT", "Redis"
+    ],
     color: "from-green-500/20 via-emerald-500/20 to-green-600/20",
     icon: <Database size={20} />,
     proficiency: 4
   },
   {
     name: "Mobile Development",
-    description: "Cross-platform mobile applications",
-    technologies: ["React Native", "Expo", "Mobile App Development", "Responsive Design", "PWA", "App Store Deployment"],
+    description: "Cross-platform mobile apps with native-like performance",
+    technologies: [
+      "React Native", "Expo", "Mobile App Development", "Responsive Design",
+      "PWA", "App Store & Play Store Deployment"
+    ],
     color: "from-purple-500/20 via-pink-500/20 to-purple-600/20",
     icon: <Smartphone size={20} />,
     proficiency: 4
   },
   {
     name: "Cloud & DevOps",
-    description: "Infrastructure and deployment automation",
-    technologies: ["AWS", "Vercel", "Docker", "Git", "CI/CD", "Serverless", "Microservices", "Kubernetes", "Terraform"],
+    description: "Deploying, managing, and scaling cloud-based applications",
+    technologies: [
+      "AWS (EC2, S3, ElastiCache, SES, SNS)", "Vercel", "Docker", "Git",
+      "GitHub Actions", "Coolify", "CI/CD", "Serverless"
+    ],
     color: "from-orange-500/20 via-red-500/20 to-orange-600/20",
     icon: <Cloud size={20} />,
     proficiency: 4
   },
   {
     name: "Design & UX",
-    description: "User experience and visual design",
-    technologies: ["Figma", "Adobe Creative Suite", "UI/UX Design", "Design Systems", "Prototyping", "User Research", "Accessibility"],
+    description: "Creating intuitive, user-friendly interfaces and experiences",
+    technologies: [
+      "Figma", "UI/UX Design", "Wireframing", "Prototyping",
+      "Design Systems", "User Research", "Accessibility"
+    ],
     color: "from-indigo-500/20 via-blue-500/20 to-indigo-600/20",
     icon: <Palette size={20} />,
     proficiency: 3
   },
   {
-    name: "AI & Machine Learning",
-    description: "Intelligent systems and data analysis",
-    technologies: ["OpenAI API", "Machine Learning", "AI Integration", "Data Analysis", "TensorFlow", "Python ML", "NLP"],
+    name: "AI & Data",
+    description: "Integrating AI features and working with data-driven applications",
+    technologies: [
+      "OpenAI API", "Machine Learning (basics)", "Data Analysis",
+      "Python ML Libraries", "NLP"
+    ],
     color: "from-teal-500/20 via-green-500/20 to-teal-600/20",
     icon: <Brain size={20} />,
     proficiency: 3
@@ -64,14 +82,18 @@ const techStack: TechCategory[] = [
 
 const additionalSkills = [
   { name: "Agile Development", icon: <Users size={16} />, category: "Methodology" },
-  { name: "Team Leadership", icon: <Zap size={16} />, category: "Leadership" },
+  { name: "Startup Agility", icon: <Zap size={16} />, category: "Leadership" },
+  { name: "Team Leadership", icon: <Users size={16} />, category: "Leadership" },
   { name: "Problem Solving", icon: <Brain size={16} />, category: "Skills" },
   { name: "Performance Optimization", icon: <Zap size={16} />, category: "Technical" },
   { name: "Security Best Practices", icon: <Shield size={16} />, category: "Security" },
   { name: "API Design", icon: <Globe size={16} />, category: "Technical" },
   { name: "Database Design", icon: <Database size={16} />, category: "Technical" },
-  { name: "System Architecture", icon: <Cloud size={16} />, category: "Technical" }
+  { name: "System Architecture", icon: <Cloud size={16} />, category: "Technical" },
+  { name: "Product Management Collaboration", icon: <Users size={16} />, category: "Product" },
+  { name: "End-to-End Project Ownership", icon: <Zap size={16} />, category: "Leadership" }
 ];
+
 
 const StackSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

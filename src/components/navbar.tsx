@@ -5,11 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTheme } from "@/contexts/theme-context";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showLogo, setshowLogo] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,9 +24,9 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { id: 1, title: "Portfolio", href: "/", active: true },
-    { id: 2, title: "Blog", href: "/" },
-    { id: 3, title: "Projects", href: "/" },
+    { id: 1, title: "Portfolio", href: "/", active: pathname === "/" },
+    { id: 2, title: "Blog", href: "/blogs", active: pathname === "/blogs" },
+    { id: 3, title: "Projects", href: "/", active: false },
   ];
 
   const handleThemeToggle = () => {

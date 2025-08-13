@@ -18,8 +18,13 @@ const VerifiedIcon = () => (
   </svg>
 );
 
-const professionalTitles = ["Delivering end to end software", "Maths enthuciast", "Studing AI/ML"]
-
+const professionalTitles = [
+  "Full-Stack Developer & Startup Builder",
+  "Founding Team Member — First Hire at Cura Care",
+  "Delivering Scalable End-to-End Software",
+  "Exploring AI/ML, Product Design, and System Architecture",
+  "Maths Enthusiast & Lifelong Learner"
+];
 const ProfileCardSection = () => {
   return (
     <section className="max-w-3xl border-x border-border w-full flex">

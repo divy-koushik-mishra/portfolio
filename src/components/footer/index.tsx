@@ -12,8 +12,8 @@ const FooterSection = () => {
   ]
 
   const contactInfo = [
-    { icon: <Mail size={16} />, text: "divy.koushik.mishra@gmail.com", href: "mailto:divy.koushik.mishra@gmail.com" },
-    { icon: <MapPin size={16} />, text: "Mumbai, India", href: "#" },
+    { icon: <Mail size={16} />, text: "divy@divykoushik.in", href: "mailto:divy@divykoushik.in" },
+    { icon: <MapPin size={16} />, text: "Bengaluru, India", href: "#" },
     { icon: <Calendar size={16} />, text: "Available for opportunities", href: "#" }
   ]
 

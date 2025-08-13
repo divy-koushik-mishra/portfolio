@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "title": "Building Scalable Full-Stack Applications with the T3 Stack",
+    "excerpt": "A comprehensive guide to building production-ready applications using Next.js, tRPC, Prisma, and PostgreSQL. Learn from real-world startup experience.",
+    "content": "Building scalable full-stack applications requires careful consideration of architecture, performance, and developer experience. In this post, I'll share my experience building production applications using the T3 Stack and how it helped us scale from MVP to thousands of users...",
+    "slug": "building-scalable-fullstack-t3-stack",
+    "publishedAt": "2024-12-15T10:00:00Z",
+    "readTime": "8 min read",
+    "tags": ["Full-Stack", "T3 Stack", "Next.js", "Architecture"],
+    "featured": true,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  },
+  {
+    "id": "2",
+    "title": "From First Technical Hire to Founding Team: Lessons Learned",
+    "excerpt": "Reflections on joining early-stage startups as the first technical hire and building products that secure VC funding.",
+    "content": "Being the first technical hire at a startup is both exhilarating and challenging. You're responsible for not just writing code, but for establishing technical foundations, making architectural decisions, and often wearing multiple hats...",
+    "slug": "first-technical-hire-founding-team-lessons",
+    "publishedAt": "2024-12-10T14:30:00Z",
+    "readTime": "6 min read",
+    "tags": ["Startup", "Leadership", "Product Development", "Career"],
+    "featured": false,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Optimizing React Performance: Real-World Techniques That Work",
+    "excerpt": "Practical performance optimization techniques I've implemented in production React applications, from code splitting to memoization.",
+    "content": "Performance optimization in React applications is crucial for user experience, especially as applications scale. In this post, I'll share specific techniques I've implemented in production that resulted in measurable improvements...",
+    "slug": "optimizing-react-performance-real-world-techniques",
+    "publishedAt": "2024-12-05T09:15:00Z",
+    "readTime": "10 min read",
+    "tags": ["React", "Performance", "Frontend", "Optimization"],
+    "featured": true,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Building FlipsideBrain: A Productivity Platform Journey",
+    "excerpt": "The story behind building a productivity platform with features like website blockers, activity tracking, and cross-device synchronization.",
+    "content": "FlipsideBrain started as a personal need to improve my productivity and digital wellbeing. As someone who spends significant time in front of screens, I wanted to build tools that help people make better choices about their digital consumption...",
+    "slug": "building-flipsidebrain-productivity-platform-journey",
+    "publishedAt": "2024-11-28T16:45:00Z",
+    "readTime": "7 min read",
+    "tags": ["Product", "Productivity", "Personal Project", "Digital Wellbeing"],
+    "featured": false,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  },
+  {
+    "id": "5",
+    "title": "System Architecture Patterns for Scalable Applications",
+    "excerpt": "Architectural patterns and decisions that enable applications to scale from hundreds to millions of users.",
+    "content": "System architecture is the foundation upon which scalable applications are built. In this post, I'll share the architectural patterns I've used in production applications and how they've evolved as our user base grew...",
+    "slug": "system-architecture-patterns-scalable-applications",
+    "publishedAt": "2024-11-20T11:20:00Z",
+    "readTime": "12 min read",
+    "tags": ["Architecture", "Scalability", "System Design", "Backend"],
+    "featured": true,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  },
+  {
+    "id": "6",
+    "title": "The Art of Product Management for Developers",
+    "excerpt": "How my journey from pure development to product management has shaped my approach to building software.",
+    "content": "Transitioning from a pure development role to one that involves product management has been one of the most valuable experiences in my career. It's taught me that great software isn't just about clean code—it's about solving real problems...",
+    "slug": "art-product-management-developers",
+    "publishedAt": "2024-11-15T13:10:00Z",
+    "readTime": "9 min read",
+    "tags": ["Product Management", "Development", "Career Growth", "Leadership"],
+    "featured": false,
+    "author": {
+      "name": "Divy Koushik Mishra",
+      "avatar": "/divy-koushik.webp"
+    }
+  }
+]

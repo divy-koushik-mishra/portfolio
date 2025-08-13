@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, Code, Palette } from 'lucide-react';
+import { Book, ChevronDown, ChevronRight, Code, Palette } from 'lucide-react';
 
 interface Experience {
   id: string;
@@ -15,75 +15,125 @@ interface Experience {
     responsibilities: string[];
     technologies: string[];
     isExpanded: boolean;
+    isCurrentJob?: boolean;
   }[];
 }
 
 const experiences: Experience[] = [
   {
-    id: 'simplamo',
-    company: 'Simplamo Enterprise JSC',
-    logo: '🏢',
+    id: 'cura-care',
+    company: 'CURA Care',
+    logo: '🏥',
     roles: [
       {
-        id: 'senior-frontend',
-        title: 'Senior Frontend Developer',
+        id: 'sde1-fulltime',
+        title: 'Software Development Engineer 1 (Founding Team Member)',
         icon: <Code className="h-4 w-4" />,
         type: 'Full-time',
-        duration: '10.2022-∞',
+        duration: '01.2025–Present',
         responsibilities: [
-          'Develop AI Chat and AI Assistant features.',
-          'Develop Whiteboards with real-time collaboration.',
-          'Build and maintain the Zalo Mini App for Simplamo with seamless integration.',
-          'Develop interactive chart and analytics widgets for the Dashboard to enhance data visualization.',
-          'Develop and maintain core features to enhance functionality and user experience.',
-          'Ensure UI/UX consistency and adherence to standards.',
-          'Implement robust frontend solutions for web and mobile platforms.',
-          'Analyze technical capabilities and provide optimal solutions.'
+          'First hire and founding team member, continuing technical leadership after internship.',
+          'Led frontend and backend iterations to improve user journey flow, boosting engagement, retention, and booking rates.',
+          'Maintained and scaled AWS-based infrastructure (EC2, S3, ElastiCache, SES, SNS) and Coolify deployments.',
+          'Executed A/B testing and funnel analysis to guide UX improvements and feature adoption.',
+          'Aligned technical efforts with business KPIs including revenue and user retention.'
         ],
-        technologies: ['TypeScript', 'Next.js', 'React Native', 'MobX', 'MobX-State-Tree', 'Tailwind CSS', 'Dify', 'Zalo Mini App'],
-        isExpanded: true
+        technologies: [
+          'TypeScript', 'Next.js App Router', 'tRPC', 'Prisma', 'PostgreSQL',
+          'Tailwind CSS', 'Zustand', 'NextAuth', 'AWS', 'Coolify', 'Docker', 'GitHub Actions'
+        ],
+        isExpanded: true,
+        isCurrentJob: true
       },
       {
-        id: 'ui-design-lead',
-        title: 'UI Design Lead',
-        icon: <Palette className="h-4 w-4" />,
-        type: 'Full-time',
-        duration: '10.2022-∞',
+        id: 'full-stack-engg-intern',
+        title: 'Full Stack Developer Intern (Founding Team Member, First Hire)',
+        icon: <Code className="h-4 w-4" />,
+        type: 'Internship',
+        duration: '08.2024–12.2024',
         responsibilities: [
-          'Lead UI/UX design initiatives and establish design systems.',
-          'Create wireframes, prototypes, and high-fidelity designs.',
-          'Collaborate with cross-functional teams to ensure design consistency.',
-          'Conduct user research and usability testing.',
-          'Mentor junior designers and provide design guidance.'
+          'Joined as the first technical hire and founding team member, writing the first line of code for the company.',
+          'Set up complete development environment, workflows, and technical foundation.',
+          'Designed and implemented database schema and system architecture.',
+          'Built the Customer App for booking and managing home dental services.',
+          'Developed the Licensed Professional (LP) App for dentists to collect data, images, and videos for oral health reports.',
+          'Created Internal Operations Management Dashboard for end-to-end service operations.',
+          'Developed and deployed MVP that secured VC funding.'
         ],
-        technologies: ['Figma', 'Adobe Creative Suite', 'Design Systems', 'User Research', 'Prototyping'],
+        technologies: [
+          'TypeScript', 'Next.js App Router', 'tRPC', 'Prisma', 'PostgreSQL',
+          'Tailwind CSS', 'Zustand', 'NextAuth', 'AWS', 'Coolify', 'Docker', 'GitHub Actions'
+        ],
         isExpanded: false
       }
     ]
   },
   {
-    id: 'quaric',
-    company: 'Quaric Co., Ltd.',
+    id: 'adizen',
+    company: 'Adizen',
     logo: '💼',
     roles: [
       {
-        id: 'design-engineer',
-        title: 'Design Engineer',
+        id: 'full-stack-intern',
+        title: 'Full Stack Developer Intern',
+        icon: <Code className="h-4 w-4" />,
+        type: 'Internship',
+        duration: '05.2024–07.2024',
+        responsibilities: [
+          'Developed modules for user management and appointment booking for a major physiotherapy chain.',
+          'Integrated Razorpay payments and implemented Cypress tests to reduce production bugs.',
+          'Deployed a scalable and cost-effective solution on DigitalOcean.'
+        ],
+        technologies: [
+          'Next.js', 'Express', 'MongoDB', 'Razorpay API', 'Cypress', 'DigitalOcean'
+        ],
+        isExpanded: false
+      }
+    ]
+  },
+  {
+    id: 'gradeperfect',
+    company: 'Gradeperfect',
+    logo: '🎓',
+    roles: [
+      {
+        id: 'founding-team-member',
+        title: 'Founding Team Member & Web Developer',
         icon: <Code className="h-4 w-4" />,
         type: 'Part-time',
-        duration: '03.2024-∞',
+        duration: '12.2023–Present',
         responsibilities: [
-          'Design and implement scalable software solutions.',
-          'Collaborate with product teams to define technical requirements.',
-          'Optimize application performance and user experience.',
-          'Participate in code reviews and technical discussions.'
+          'Developed and maintained core web applications for the organization.',
+          'Automated workflows for attendance tracking, lead management, and invoicing.',
+          'Deployed MERN stack applications on DigitalOcean.',
+          'Integrated marketing tools via WordPress to improve engagement and conversions.'
         ],
-        technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker'],
-        isExpanded: false
+        technologies: [
+          'MongoDB', 'Express', 'React', 'Node.js', 'DigitalOcean', 'WordPress'
+        ],
+        isExpanded: true
+      },
+      {
+        id: 'computer-science-tutor',
+        title: 'Computer Science Tutor',
+        icon: <Book className="h-4 w-4" />,
+        type: 'Part-time',
+        duration: '03.2024–11.2024',
+        responsibilities: [
+          'Taught programming fundamentals, data structures, and algorithms to students.',
+          'Prepared lesson plans and exercises for Python and Computer Science concepts.',
+          'Mentored students in problem-solving and project development.'
+        ],
+        technologies: [
+          'Python', 'Computer Science Fundamentals', 'Teaching'
+        ],
+        isExpanded: false,
+        isCurrentJob: true
       }
     ]
   }
 ];
+
 
 const ExperienceSection = () => {
   const [expandedRoles, setExpandedRoles] = useState<Set<string>>(
@@ -98,6 +148,11 @@ const ExperienceSection = () => {
       newExpanded.add(roleId);
     }
     setExpandedRoles(newExpanded);
+  };
+
+  // Check if any role in the company is current job
+  const hasCurrentJob = (roles: Experience['roles']) => {
+    return roles.some(role => role.isCurrentJob);
   };
 
   return (
@@ -115,7 +170,13 @@ const ExperienceSection = () => {
                 <h3 className="text-lg font-semibold text-foreground">
                   {experience.company}
                 </h3>
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                {hasCurrentJob(experience.roles) && (
+                  <div className="relative">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-wavy-flow"></div>
+                    <div className="absolute inset-0 w-2 h-2 bg-blue-400 rounded-full animate-ripple-wave opacity-75"></div>
+                    <div className="absolute inset-0 w-2 h-2 bg-blue-300 rounded-full animate-gentle-pulse" style={{ animationDelay: '1s' }}></div>
+                  </div>
+                )}
               </div>
             </div>
 
