@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Book, ChevronDown, ChevronRight, Code, Palette } from 'lucide-react';
+import { Book, ChevronDown, ChevronRight, Code } from 'lucide-react';
 
 interface Experience {
   id: string;

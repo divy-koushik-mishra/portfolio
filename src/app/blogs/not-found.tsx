@@ -12,7 +12,7 @@ const BlogNotFound = () => {
               Blog Post Not Found
             </h1>
             <p className="font-mono text-[15px] text-foreground/70 mb-6 max-w-md mx-auto">
-              The blog post you're looking for doesn't exist or may have been moved.
+              The blog post you&apos;re looking for doesn&apos;t exist or may have been moved.
             </p>
             <Link
               href="/blogs"
