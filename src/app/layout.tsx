@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/theme-context";
 import FooterSection from "@/components/footer";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Divy Koushik Mishra",
@@ -23,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <body
-        className={`${geistMono.variable} antialiased selection:bg-foreground selection:text-background`}
+        className={` antialiased selection:bg-foreground selection:text-background`}
       >
         <ThemeProvider>
           <Navbar />

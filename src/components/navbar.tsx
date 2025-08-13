@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { id: 1, title: "Portfolio", href: "/" },
+    { id: 1, title: "Portfolio", href: "/", active: true },
     { id: 2, title: "Blog", href: "/" },
     { id: 3, title: "Projects", href: "/" },
   ];
@@ -62,7 +62,11 @@ const Navbar = () => {
             <Link
               href={item.href}
               key={item.id}
-              className="hover:text-foreground/80 transition-colors"
+              className={`transition-colors ${
+                item.active
+                  ? "text-foreground font-semibold border-foreground pb-1"
+                  : "text-foreground/70 hover:text-foreground/90"
+              }`}
             >
               {item.title}
             </Link>
