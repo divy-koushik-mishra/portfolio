@@ -10,9 +10,9 @@ import { BlogPost } from '@/types/blog'
 const typedBlogData: BlogPost[] = blogData as BlogPost[]
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const blog = typedBlogData.find((blog) => blog.slug === params.slug)
+  const { slug } = await params
+  const blog = typedBlogData.find((blog) => blog.slug === slug)
   
   if (!blog) {
     return {
@@ -44,8 +45,9 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 }
 
-const BlogPostPage = ({ params }: BlogPostPageProps) => {
-  const blog = typedBlogData.find((blog) => blog.slug === params.slug)
+const BlogPostPage = async ({ params }: BlogPostPageProps) => {
+  const { slug } = await params
+  const blog = typedBlogData.find((blog) => blog.slug === slug)
 
   if (!blog) {
     notFound()
