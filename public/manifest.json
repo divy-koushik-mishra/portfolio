@@ -1,0 +1,20 @@
+{
+  "name": "Divy Koushik Mishra - Full-Stack Developer & Product Builder",
+  "short_name": "Divy Koushik",
+  "description": "Portfolio and blog of Divy Koushik Mishra, a full-stack developer and product builder with experience in scalable applications and startup building.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/dk-pixelated.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["technology", "business", "productivity"],
+  "lang": "en-US"
+}

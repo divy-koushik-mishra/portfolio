@@ -5,6 +5,7 @@ import Link from 'next/link'
 import blogData from '@/data/blogs.json'
 import DiagonalLineGradientBgFull from '@/components/hero/diagonalLineGradientBgFull'
 import { BlogPost } from '@/types/blog'
+import type { Metadata } from 'next'
 
 // Type assertion for the JSON data
 const typedBlogData: BlogPost[] = blogData as BlogPost[]
@@ -21,7 +22,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
   const blog = typedBlogData.find((blog) => blog.slug === slug)
   
@@ -33,14 +34,42 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   }
 
   return {
-    title: `${blog.title} | Divy Koushik Mishra`,
+    title: blog.title,
     description: blog.excerpt,
+    keywords: [...blog.tags, 'blog', 'full-stack development', 'startup', 'product development'],
+    authors: [{ name: blog.author.name }],
     openGraph: {
       title: blog.title,
       description: blog.excerpt,
       type: 'article',
+      url: `https://divykoushik.com/blogs/${blog.slug}`,
+      siteName: 'Divy Koushik Mishra',
+      images: [
+        {
+          url: '/divy-koushik.webp',
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
       authors: [blog.author.name],
       publishedTime: blog.publishedAt,
+      tags: blog.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: blog.title,
+      description: blog.excerpt,
+      images: ['/divy-koushik.webp'],
+    },
+    alternates: {
+      canonical: `https://divykoushik.com/blogs/${blog.slug}`,
+    },
+    other: {
+      'article:published_time': blog.publishedAt,
+      'article:author': blog.author.name,
+      'article:section': 'Technology',
+      'article:tag': blog.tags.join(', '),
     },
   }
 }
@@ -62,8 +91,46 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
     })
   }
 
+  // Structured data for the blog post
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": blog.title,
+    "description": blog.excerpt,
+    "image": "https://divykoushik.com/divy-koushik.webp",
+    "author": {
+      "@type": "Person",
+      "name": blog.author.name,
+      "url": "https://divykoushik.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": blog.author.name,
+      "url": "https://divykoushik.com"
+    },
+    "datePublished": blog.publishedAt,
+    "dateModified": blog.publishedAt,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://divykoushik.com/blogs/${blog.slug}`
+    },
+    "articleSection": "Technology",
+    "keywords": blog.tags.join(", "),
+    "wordCount": blog.content.split(' ').length,
+    "timeRequired": blog.readTime,
+    "isAccessibleForFree": true
+  }
+
   return (
     <div className="">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+      
       <article className="w-full flex items-center flex-col">
         <div className="max-w-3xl w-full border-x border-border">
           {/* Header */}
@@ -108,7 +175,7 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
                   <span className="font-mono">{blog.author.name}</span>
                 </div>
                 <span>•</span>
-                <span>{formatDate(blog.publishedAt)}</span>
+                <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
                 <span>•</span>
                 <span>{blog.readTime}</span>
                 {blog.featured && (
