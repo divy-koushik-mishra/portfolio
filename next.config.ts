@@ -72,13 +72,7 @@ const nextConfig: NextConfig = {
         permanent: false
       }
     ]
-  },
-
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
+  }, 
 };
 
 export default nextConfig;
