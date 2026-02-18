@@ -18,11 +18,11 @@ const VerifiedIcon = () => (
 );
 
 const professionalTitles = [
-  "Full-Stack Developer & Startup Builder",
-  "Founding Team Member — First Hire at Cura Care",
-  "Delivering Scalable End-to-End Software",
-  "Exploring AI/ML, Product Design, and System Architecture",
-  "Maths Enthusiast & Lifelong Learner",
+  "Full-Stack Developer — Available for Freelance",
+  "I build MVPs that secure funding",
+  "End-to-end: idea → design → ship → scale",
+  "React · Next.js · React Native · AWS",
+  "Founding engineer at two startups",
 ];
 
 const ProfileCardSection = () => {

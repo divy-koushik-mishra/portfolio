@@ -6,7 +6,6 @@ import {
   MapPin,
   Mail,
   Globe,
-  User
 } from "lucide-react";
 
 const BioSection = () => {
@@ -24,27 +23,22 @@ const BioSection = () => {
     {
       id: 2,
       icon: <GraduationCap className="size-4 text-muted-foreground" />,
-      text: "Indian Institute of Technology, Madras - Data Science",
+      text: "IIT Madras — Data Science",
     },
     {
       id: 3,
       icon: <MapPin className="size-4 text-muted-foreground" />,
-      text: "Gurgaon, India",
+      text: "Gurgaon, India · Open to remote",
     },
     {
       id: 4,
       icon: <Mail className="size-4 text-muted-foreground" />,
-      text: "divy@divykoushik.in",
+      text: "<a href='mailto:divykoushikmishra@gmail.com' class='text-foreground hover:underline'>divykoushikmishra@gmail.com</a>",
     },
     {
       id: 5,
       icon: <Globe className="size-4 text-muted-foreground" />,
       text: "divykoushik.in",
-    },
-    {
-      id: 6,
-      icon: <User className="size-4 text-muted-foreground" />,
-      text: "he/him",
     },
   ];
 

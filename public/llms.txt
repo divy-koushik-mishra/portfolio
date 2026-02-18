@@ -1,0 +1,77 @@
+# Divy Koushik Mishra
+
+> Full-Stack Developer, Founding Engineer, and Technical Consultant based in India. Available for freelance projects, consulting, and full-time roles.
+
+## About
+
+Divy Koushik Mishra is a Full-Stack Developer and founding team member at multiple startups. He specializes in building scalable, production-ready applications from concept to launch. He has experience as the first technical hire at early-stage startups, building MVPs that secured VC funding, and leading end-to-end product development.
+
+## Current Roles
+
+- Founding Engineer at HandyPanda (Sep 2025 – Present)
+- Founding Team Member & Web Developer at Gradeperfect (Dec 2023 – Present)
+
+## Skills
+
+- Frontend: React, Next.js, TypeScript, JavaScript, Tailwind CSS, Framer Motion, Zustand, React Query
+- Backend & APIs: Node.js, Python, FastAPI, Express.js, PostgreSQL, MongoDB, Prisma, tRPC, Redis
+- Mobile: React Native, Expo, PWA
+- Cloud & DevOps: AWS, Vercel, Docker, GitHub Actions, Coolify, CI/CD, Serverless
+- Design & UX: Figma, UI/UX Design, Wireframing, Prototyping, Design Systems, Accessibility
+- AI & Data: OpenAI API, Machine Learning, Data Analysis, Python ML Libraries, NLP
+- Other: System Architecture, API Design, Database Design, Performance Optimization, Security Best Practices, Team Leadership, Agile Development
+
+## Services
+
+- Full-Stack Web Application Development
+- MVP Development for Startups
+- Technical Architecture & Consulting
+- React / Next.js Frontend Development
+- API Design & Backend Development
+- Mobile App Development (React Native)
+- Cloud Infrastructure & DevOps Setup
+- Performance Optimization & Code Review
+- UI/UX Design and Implementation
+
+## Experience
+
+### HandyPanda — Founding Engineer (Sep 2025 – Present)
+Driving core technical decisions and architecture from the ground up.
+
+### CURA Care — SDE-1, Founding Team Member (Jan 2025 – Dec 2025)
+First hire and founding team member. Led frontend and backend iterations to improve user journey flow. Maintained AWS infrastructure (EC2, S3, ElastiCache, SES, SNS). Built MVPs that secured VC funding.
+Technologies: TypeScript, Next.js, tRPC, Prisma, PostgreSQL, Tailwind CSS, Zustand, NextAuth, AWS, Docker
+
+### CURA Care — Full Stack Developer Intern, First Hire (Aug 2024 – Dec 2024)
+Wrote the first line of code for the company. Designed database schema and system architecture. Built Customer App, Licensed Professional App, and Internal Operations Dashboard.
+Technologies: TypeScript, Next.js, tRPC, Prisma, PostgreSQL, AWS, Coolify, Docker, GitHub Actions
+
+### Adizen — Full Stack Developer Intern (May 2024 – Jul 2024)
+Developed user management and appointment booking modules. Integrated Razorpay payments. Deployed on DigitalOcean.
+Technologies: Next.js, Express, MongoDB, Razorpay API, Cypress, DigitalOcean
+
+### Gradeperfect — Founding Team Member & Web Developer (Dec 2023 – Present)
+Developed core web applications. Automated workflows for attendance tracking, lead management, and invoicing. Deployed MERN stack applications on DigitalOcean.
+
+## Education
+
+- Indian Institute of Technology, Madras — Data Science
+
+## Contact
+
+- Email: divykoushikmishra@gmail.com
+- Website: https://divykoushik.in
+- GitHub: https://github.com/divy-koushik-mishra/
+- LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
+- X/Twitter: https://x.com/divy_koushik
+
+## Hiring
+
+Divy is available for freelance work, contract projects, technical consulting, and full-time opportunities. He excels at taking ideas from concept to production, leading technical execution at early-stage startups, and aligning engineering with business goals. To discuss a project or opportunity, email divykoushikmishra@gmail.com.
+
+## Links
+
+- [Full LLM context](/llms-full.txt)
+- [Portfolio](https://divykoushik.in)
+- [GitHub](https://github.com/divy-koushik-mishra/)
+- [LinkedIn](https://www.linkedin.com/in/divy-koushik-mishra)

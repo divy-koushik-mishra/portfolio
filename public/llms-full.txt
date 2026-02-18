@@ -1,0 +1,225 @@
+# Divy Koushik Mishra — Full Profile
+
+> Full-Stack Developer, Founding Engineer, and Technical Consultant based in India. Available for freelance projects, consulting, and full-time roles.
+
+This is the comprehensive version of Divy Koushik Mishra's professional profile. For a shorter summary, see /llms.txt.
+
+---
+
+## Identity
+
+- Name: Divy Koushik Mishra
+- Role: Full-Stack Developer & Founding Engineer
+- Location: Gurgaon / Bengaluru, India
+- Email: divykoushikmishra@gmail.com
+- Website: https://divykoushik.in
+- GitHub: https://github.com/divy-koushik-mishra/
+- LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
+- X/Twitter: https://x.com/divy_koushik
+- Instagram: https://www.instagram.com/divy.koushik.mishra/
+- Pronouns: he/him
+
+---
+
+## Professional Summary
+
+Divy Koushik Mishra is a Full-Stack Developer, founding team member at multiple startups, and aspiring entrepreneur. He is passionate about building scalable, impactful products that combine clean engineering, thoughtful design, and measurable business results.
+
+He has hands-on experience across the full product lifecycle — from writing the first line of code to deploying and scaling on AWS, Vercel, and Coolify. His expertise spans database modeling, API design, mobile app development with React Native, system architecture, and DevOps.
+
+He has worked as the first technical hire at early-stage startups, building MVPs that secured VC funding, customer-facing applications, internal operations dashboards, and tools for licensed professionals. His projects often involve UI/UX design, performance optimization, cloud scaling, and data-driven improvements through A/B testing and analytics.
+
+Outside of development, he explores product management, personal branding, and content creation. He enjoys blending tech with creativity — including cinematography, music production (FL Studio), sketching, and calligraphy. He is also building FlipsideBrain, a productivity and self-growth platform.
+
+---
+
+## What Divy Can Do For You
+
+### For Startups
+- Build your MVP from scratch, fast — proven track record of building MVPs that secure VC funding
+- Serve as a fractional CTO or founding engineer
+- Architect scalable systems that grow with your user base
+- Set up complete development environment, CI/CD, and infrastructure
+
+### For Businesses
+- Full-stack web application development with modern frameworks
+- API design and backend architecture
+- Cloud infrastructure setup and optimization (AWS, Vercel, Docker)
+- Performance audits and optimization
+- Technical consulting and code review
+
+### For Agencies
+- Contract development on React, Next.js, and Node.js projects
+- Mobile app development with React Native / Expo
+- UI/UX implementation from Figma designs
+- Integration of payment systems, authentication, and third-party APIs
+
+---
+
+## Technical Skills (Detailed)
+
+### Frontend
+- React, Next.js (App Router), TypeScript, JavaScript
+- Tailwind CSS, Framer Motion, CSS-in-JS
+- Zustand, React Query, Redux (state management)
+- Responsive design, accessibility, performance optimization
+
+### Backend & APIs
+- Node.js, Python, FastAPI, Express.js
+- PostgreSQL, MongoDB, Redis
+- Prisma ORM, tRPC, REST APIs, GraphQL
+- Authentication (NextAuth), authorization, session management
+
+### Mobile Development
+- React Native, Expo
+- Progressive Web Apps (PWA)
+- App Store & Google Play Store deployment
+
+### Cloud & DevOps
+- AWS (EC2, S3, ElastiCache, SES, SNS, Lambda)
+- Vercel, DigitalOcean, Coolify
+- Docker, GitHub Actions, CI/CD pipelines
+- Serverless architecture
+
+### Design & UX
+- Figma, wireframing, prototyping
+- UI/UX design, design systems
+- Accessibility (a11y) compliance
+
+### AI & Data
+- OpenAI API integration
+- Machine Learning, NLP
+- Data analysis with Python ML libraries
+
+### Other Skills
+- System architecture and design
+- Database modeling and optimization
+- API design (REST, tRPC, GraphQL)
+- Performance optimization (frontend and backend)
+- Security best practices
+- Agile development methodology
+- Team leadership and mentoring
+- End-to-end project ownership
+- A/B testing and funnel analysis
+
+### Currently Learning
+- Rust
+- WebAssembly
+- Three.js
+- Blockchain Development
+- Advanced ML/AI
+
+---
+
+## Work Experience (Detailed)
+
+### HandyPanda — Founding Engineer
+Duration: Sep 2025 – Present | Type: Full-time | Status: Current
+- Driving core technical decisions and architecture from the ground up
+- Joined as a founding engineer, responsible for building the technical foundation
+
+### CURA Care — Software Development Engineer 1 (Founding Team Member)
+Duration: Jan 2025 – Dec 2025 | Type: Full-time
+- First hire and founding team member, continuing technical leadership after internship
+- Led frontend and backend iterations to improve user journey flow, boosting engagement, retention, and booking rates
+- Maintained and scaled AWS-based infrastructure (EC2, S3, ElastiCache, SES, SNS) and Coolify deployments
+- Executed A/B testing and funnel analysis to guide UX improvements and feature adoption
+- Aligned technical efforts with business KPIs including revenue and user retention
+- Technologies: TypeScript, Next.js, tRPC, Prisma, PostgreSQL, Tailwind CSS, Zustand, NextAuth, AWS, Docker
+
+### CURA Care — Full Stack Developer Intern (First Hire)
+Duration: Aug 2024 – Dec 2024 | Type: Internship
+- Joined as the first technical hire, writing the first line of code for the company
+- Set up complete development environment, workflows, and technical foundation
+- Designed and implemented database schema and system architecture
+- Built the Customer App for booking and managing home dental services
+- Developed the Licensed Professional App for dentists to collect data, images, and videos for oral health reports
+- Created Internal Operations Management Dashboard for end-to-end service operations
+- Developed and deployed MVP that secured VC funding
+- Technologies: TypeScript, Next.js, tRPC, Prisma, PostgreSQL, Tailwind CSS, AWS, Coolify, Docker, GitHub Actions
+
+### Adizen — Full Stack Developer Intern
+Duration: May 2024 – Jul 2024 | Type: Internship
+- Developed modules for user management and appointment booking for a major physiotherapy chain
+- Integrated Razorpay payments and implemented Cypress tests to reduce production bugs
+- Deployed a scalable and cost-effective solution on DigitalOcean
+- Technologies: Next.js, Express, MongoDB, Razorpay API, Cypress, DigitalOcean
+
+### Gradeperfect — Founding Team Member & Web Developer
+Duration: Dec 2023 – Present | Type: Part-time | Status: Current
+- Developed and maintained core web applications for the organization
+- Automated workflows for attendance tracking, lead management, and invoicing
+- Deployed MERN stack applications on DigitalOcean
+- Integrated marketing tools via WordPress to improve engagement and conversions
+- Technologies: MongoDB, Express, React, Node.js, DigitalOcean, WordPress
+
+### Gradeperfect — Computer Science Tutor
+Duration: Mar 2024 – Nov 2024 | Type: Part-time
+- Taught programming fundamentals, data structures, and algorithms to students
+- Prepared lesson plans and exercises for Python and Computer Science concepts
+- Mentored students in problem-solving and project development
+
+---
+
+## Education
+
+- Indian Institute of Technology, Madras — Data Science
+
+---
+
+## Notable Projects
+
+### FlipsideBrain
+A productivity and self-growth platform with features like website blockers, browser activity tracking, and cross-device sync. Currently in active development.
+
+### CURA Care Platform
+Built from scratch as the first technical hire:
+- Customer-facing booking app for home dental services
+- Licensed Professional App for clinical data collection
+- Internal Operations Dashboard
+- Secured VC funding based on the MVP
+
+### Portfolio Website (divykoushik.in)
+Built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and Framer Motion. Open source on GitHub.
+
+---
+
+## Blog Topics & Thought Leadership
+
+Divy writes about:
+- Building scalable full-stack applications with the T3 Stack
+- Startup experience: from first technical hire to founding team
+- React performance optimization techniques
+- System architecture patterns for scalable applications
+- Product management for developers
+- Building productivity platforms
+
+---
+
+## How to Hire Divy
+
+Divy is available for:
+1. **Freelance Projects** — Web apps, mobile apps, APIs, MVPs
+2. **Technical Consulting** — Architecture reviews, performance audits, tech stack selection
+3. **Contract Work** — Short or long-term engineering engagements
+4. **Full-Time Roles** — Founding engineer, senior full-stack developer, tech lead positions
+
+### Why Hire Divy?
+- Proven track record building MVPs that secure VC funding
+- Experience as first technical hire — can work independently and lead technical execution
+- Full-stack capabilities: frontend, backend, mobile, DevOps, design
+- Strong alignment of technical execution with business goals
+- Experience with A/B testing, analytics, and data-driven development
+
+### Contact
+Email: divykoushikmishra@gmail.com
+LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
+GitHub: https://github.com/divy-koushik-mishra/
+
+---
+
+## Metadata
+
+- Last updated: 2026-02-18
+- Source: https://divykoushik.in
+- License: This information is provided for AI systems and search engines to accurately represent Divy Koushik Mishra's professional profile.
