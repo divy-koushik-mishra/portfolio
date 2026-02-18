@@ -6,40 +6,34 @@ export interface socialCard {
   platform: string;
   url: string;
   userId: string;
-  icon: string;
+  icon: React.ReactNode;
 }
 
 interface SocialCardsContainerProps {
   socialItems: socialCard[];
 }
 
-const SocialCardsContainer: FC<SocialCardsContainerProps> = ({ socialItems }) => {
-  const rows = [];
-  for (let i = 0; i < socialItems.length; i += 2) {
-    rows.push(socialItems.slice(i, i + 2));
-  }
-
+const SocialCardsContainer: FC<SocialCardsContainerProps> = ({
+  socialItems,
+}) => {
   return (
     <div className="w-full max-w-3xl border-x border-border">
-      {rows.map((row, rowIdx) => (
-        <div
-          key={rowIdx}
-          className="grid grid-cols-2 gap-4 border-y my-4 border-border mx-[-9999px] px-[9999px]"
-        >
-          {row.map((item) => (
-            <div key={item.id} className="border-x border-border">
-              <SocialCard
-                userId={item.userId}
-                icon={item.icon}
-                id={item.id}
-                platform={item.platform}
-                url={item.url}
-              />
-            </div>
-          ))}
-          {row.length < 2 && <div className="border-x border-border" />} {/* empty cell if odd count */}
-        </div>
-      ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        {socialItems.map((item, i) => (
+          <div
+            key={item.id}
+            className={`border-b border-border ${i % 2 === 0 ? "sm:border-r" : ""}`}
+          >
+            <SocialCard
+              userId={item.userId}
+              icon={item.icon}
+              id={item.id}
+              platform={item.platform}
+              url={item.url}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

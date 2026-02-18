@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTheme } from "@/contexts/theme-context";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
-      setshowLogo(window.scrollY > 156)
+      setshowLogo(window.scrollY > 156);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -68,54 +69,84 @@ const Navbar = () => {
       }`}
     >
       <div className="border-t mt-2 border-border w-full flex justify-center h-12">
-      <div className="max-w-3xl w-full border-x  border-border flex items-center justify-between px-2 font-mono text-foreground font-medium overflow-y-hidden">
-        {/* logo */}
-        <div
-          className={`transition-all duration-300 transform ${
-            showLogo
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
-          }`}
-        >
-          <Image 
-            src={theme === 'dark' ? "/dk-pixelated-white.svg" : "/dk-pixelated.svg"} 
-            height={32} 
-            width={32} 
-            alt="Logo" 
-            className="h-6 w-auto" 
-          />
-        </div>
-
-        {/* menu items */}
-        <div className="flex items-center gap-4">
-          {menuItems.map((item) => (
-            <Link
-              href={item.href}
-              key={item.id}
-              className={`transition-colors ${
-                item.active
-                  ? "text-foreground font-semibold border-foreground pb-1"
-                  : "text-foreground/70 hover:text-foreground/90"
-              }`}
-            >
-              {item.title}
-            </Link>
-          ))}
-
-          {/* github and theme mode icon */}
-          <div className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer">
-            <Github size={16} />
-          </div>
-          <button
-            onClick={handleThemeToggle}
-            className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer"
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            type="button"
+        <div className="max-w-3xl w-full border-x border-border flex items-center justify-between px-2 font-mono text-foreground font-medium overflow-y-hidden">
+          {/* logo */}
+          <div
+            className={`transition-all duration-300 transform ${
+              showLogo
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-4 pointer-events-none"
+            }`}
           >
-            {theme === 'dark' ? <MoonStar size={16} /> : <Sun size={16} />}
-          </button>
+            <Image
+              src={
+                theme === "dark"
+                  ? "/dk-pixelated-white.svg"
+                  : "/dk-pixelated.svg"
+              }
+              height={32}
+              width={32}
+              alt="Logo"
+              className="h-6 w-auto"
+            />
+          </div>
+
+          {/* menu items */}
+          <div className="flex items-center gap-4">
+            {menuItems.map((item) => (
+              <Link
+                href={item.href}
+                key={item.id}
+                className={`transition-colors ${
+                  item.active
+                    ? "text-foreground font-semibold border-foreground pb-1"
+                    : "text-foreground/70 hover:text-foreground/90"
+                }`}
+              >
+                {item.title}
+              </Link>
+            ))}
+
+            {/* github */}
+            <div className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer">
+              <Github size={16} />
+            </div>
+
+            {/* theme toggle with icon morph */}
+            <button
+              onClick={handleThemeToggle}
+              className="border border-border rounded-full p-2 hover:bg-muted transition-colors cursor-pointer relative h-9 w-9 flex items-center justify-center"
+              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              type="button"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {theme === "dark" ? (
+                  <motion.span
+                    key="moon"
+                    initial={{ rotate: -90, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: 90, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="absolute"
+                  >
+                    <MoonStar size={16} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="sun"
+                    initial={{ rotate: 90, scale: 0, opacity: 0 }}
+                    animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                    exit={{ rotate: -90, scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                    className="absolute"
+                  >
+                    <Sun size={16} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
         </div>
-      </div>
       </div>
     </nav>
   );

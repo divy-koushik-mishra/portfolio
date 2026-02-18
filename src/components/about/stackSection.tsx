@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Code2,
   Database,
@@ -144,12 +145,15 @@ const StackSection = () => {
               </div>
               <div className="flex flex-wrap gap-1.5">
                 {cat.technologies.map((tech) => (
-                  <span
+                  <motion.span
                     key={tech}
-                    className="px-2 py-0.5 text-xs font-mono rounded-md bg-secondary text-secondary-foreground border border-border"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className="px-2 py-0.5 text-xs font-mono rounded-md bg-secondary text-secondary-foreground border border-border cursor-default"
                   >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </div>
@@ -161,12 +165,14 @@ const StackSection = () => {
           <h3 className="font-semibold text-foreground">Other Skills</h3>
           <div className="flex flex-wrap gap-2">
             {otherSkills.map((skill) => (
-              <span
+              <motion.span
                 key={skill}
-                className="px-2.5 py-1 text-sm rounded-lg bg-muted text-muted-foreground border border-border"
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="px-2.5 py-1 text-sm rounded-lg bg-muted text-muted-foreground border border-border cursor-default"
               >
                 {skill}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
@@ -176,16 +182,18 @@ const StackSection = () => {
           <h3 className="font-semibold text-foreground">Currently Learning</h3>
           <div className="flex flex-wrap gap-2">
             {learning.map((tech) => (
-              <span
+              <motion.span
                 key={tech}
-                className="px-2.5 py-1 text-sm font-mono rounded-lg bg-muted text-muted-foreground border border-dashed border-muted-foreground/30 flex items-center gap-2"
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="px-2.5 py-1 text-sm font-mono rounded-lg bg-muted text-muted-foreground border border-dashed border-muted-foreground/30 flex items-center gap-2 cursor-default"
               >
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-500" />
                 </span>
                 {tech}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
