@@ -1,265 +1,304 @@
 "use client";
-import React, { useState } from 'react';
-import { Book, ChevronDown, ChevronRight, Code } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Briefcase, GraduationCap } from "lucide-react";
+
+interface Role {
+  id: string;
+  title: string;
+  type: string;
+  duration: string;
+  responsibilities: string[];
+  technologies: string[];
+  isCurrent?: boolean;
+}
 
 interface Experience {
   id: string;
   company: string;
   logo: string;
-  roles: {
-    id: string;
-    title: string;
-    icon: React.ReactNode;
-    type: string;
-    duration: string;
-    responsibilities: string[];
-    technologies: string[];
-    isExpanded: boolean;
-    isCurrentJob?: boolean;
-  }[];
+  roles: Role[];
 }
 
 const experiences: Experience[] = [
   {
-    id: 'cura-care',
-    company: 'CURA Care',
-    logo: '🏥',
+    id: "handypanda",
+    company: "HandyPanda",
+    logo: "🐼",
     roles: [
       {
-        id: 'sde1-fulltime',
-        title: 'Software Development Engineer 1 (Founding Team Member)',
-        icon: <Code className="h-4 w-4" />,
-        type: 'Full-time',
-        duration: '01.2025–Present',
+        id: "founding-engineer-hp",
+        title: "Founding Engineer",
+        type: "Full-time",
+        duration: "Sep 2025 – Present",
+        isCurrent: true,
         responsibilities: [
-          'First hire and founding team member, continuing technical leadership after internship.',
-          'Led frontend and backend iterations to improve user journey flow, boosting engagement, retention, and booking rates.',
-          'Maintained and scaled AWS-based infrastructure (EC2, S3, ElastiCache, SES, SNS) and Coolify deployments.',
-          'Executed A/B testing and funnel analysis to guide UX improvements and feature adoption.',
-          'Aligned technical efforts with business KPIs including revenue and user retention.'
+          "Joined as a founding engineer, driving core technical decisions and architecture from the ground up.",
         ],
-        technologies: [
-          'TypeScript', 'Next.js App Router', 'tRPC', 'Prisma', 'PostgreSQL',
-          'Tailwind CSS', 'Zustand', 'NextAuth', 'AWS', 'Coolify', 'Docker', 'GitHub Actions'
-        ],
-        isExpanded: true,
-        isCurrentJob: true
+        technologies: [],
       },
-      {
-        id: 'full-stack-engg-intern',
-        title: 'Full Stack Developer Intern (Founding Team Member, First Hire)',
-        icon: <Code className="h-4 w-4" />,
-        type: 'Internship',
-        duration: '08.2024–12.2024',
-        responsibilities: [
-          'Joined as the first technical hire and founding team member, writing the first line of code for the company.',
-          'Set up complete development environment, workflows, and technical foundation.',
-          'Designed and implemented database schema and system architecture.',
-          'Built the Customer App for booking and managing home dental services.',
-          'Developed the Licensed Professional (LP) App for dentists to collect data, images, and videos for oral health reports.',
-          'Created Internal Operations Management Dashboard for end-to-end service operations.',
-          'Developed and deployed MVP that secured VC funding.'
-        ],
-        technologies: [
-          'TypeScript', 'Next.js App Router', 'tRPC', 'Prisma', 'PostgreSQL',
-          'Tailwind CSS', 'Zustand', 'NextAuth', 'AWS', 'Coolify', 'Docker', 'GitHub Actions'
-        ],
-        isExpanded: false
-      }
-    ]
+    ],
   },
   {
-    id: 'adizen',
-    company: 'Adizen',
-    logo: '💼',
+    id: "cura-care",
+    company: "CURA Care",
+    logo: "🏥",
     roles: [
       {
-        id: 'full-stack-intern',
-        title: 'Full Stack Developer Intern',
-        icon: <Code className="h-4 w-4" />,
-        type: 'Internship',
-        duration: '05.2024–07.2024',
+        id: "sde1-fulltime",
+        title: "Software Development Engineer 1 (Founding Team Member)",
+        type: "Full-time",
+        duration: "Jan 2025 – Dec 2025",
         responsibilities: [
-          'Developed modules for user management and appointment booking for a major physiotherapy chain.',
-          'Integrated Razorpay payments and implemented Cypress tests to reduce production bugs.',
-          'Deployed a scalable and cost-effective solution on DigitalOcean.'
+          "First hire and founding team member, continuing technical leadership after internship.",
+          "Led frontend and backend iterations to improve user journey flow, boosting engagement, retention, and booking rates.",
+          "Maintained and scaled AWS-based infrastructure (EC2, S3, ElastiCache, SES, SNS) and Coolify deployments.",
+          "Executed A/B testing and funnel analysis to guide UX improvements and feature adoption.",
+          "Aligned technical efforts with business KPIs including revenue and user retention.",
         ],
         technologies: [
-          'Next.js', 'Express', 'MongoDB', 'Razorpay API', 'Cypress', 'DigitalOcean'
+          "TypeScript",
+          "Next.js",
+          "tRPC",
+          "Prisma",
+          "PostgreSQL",
+          "Tailwind CSS",
+          "Zustand",
+          "NextAuth",
+          "AWS",
+          "Docker",
         ],
-        isExpanded: false
-      }
-    ]
-  },
-  {
-    id: 'gradeperfect',
-    company: 'Gradeperfect',
-    logo: '🎓',
-    roles: [
-      {
-        id: 'founding-team-member',
-        title: 'Founding Team Member & Web Developer',
-        icon: <Code className="h-4 w-4" />,
-        type: 'Part-time',
-        duration: '12.2023–Present',
-        responsibilities: [
-          'Developed and maintained core web applications for the organization.',
-          'Automated workflows for attendance tracking, lead management, and invoicing.',
-          'Deployed MERN stack applications on DigitalOcean.',
-          'Integrated marketing tools via WordPress to improve engagement and conversions.'
-        ],
-        technologies: [
-          'MongoDB', 'Express', 'React', 'Node.js', 'DigitalOcean', 'WordPress'
-        ],
-        isExpanded: true
       },
       {
-        id: 'computer-science-tutor',
-        title: 'Computer Science Tutor',
-        icon: <Book className="h-4 w-4" />,
-        type: 'Part-time',
-        duration: '03.2024–11.2024',
+        id: "full-stack-engg-intern",
+        title: "Full Stack Developer Intern (First Hire)",
+        type: "Internship",
+        duration: "Aug 2024 – Dec 2024",
         responsibilities: [
-          'Taught programming fundamentals, data structures, and algorithms to students.',
-          'Prepared lesson plans and exercises for Python and Computer Science concepts.',
-          'Mentored students in problem-solving and project development.'
+          "Joined as the first technical hire, writing the first line of code for the company.",
+          "Set up complete development environment, workflows, and technical foundation.",
+          "Designed and implemented database schema and system architecture.",
+          "Built the Customer App for booking and managing home dental services.",
+          "Developed the Licensed Professional App for dentists to collect data, images, and videos for oral health reports.",
+          "Created Internal Operations Management Dashboard for end-to-end service operations.",
+          "Developed and deployed MVP that secured VC funding.",
         ],
         technologies: [
-          'Python', 'Computer Science Fundamentals', 'Teaching'
+          "TypeScript",
+          "Next.js",
+          "tRPC",
+          "Prisma",
+          "PostgreSQL",
+          "Tailwind CSS",
+          "AWS",
+          "Coolify",
+          "Docker",
+          "GitHub Actions",
         ],
-        isExpanded: false,
-        isCurrentJob: true
-      }
-    ]
-  }
+      },
+    ],
+  },
+  {
+    id: "adizen",
+    company: "Adizen",
+    logo: "💼",
+    roles: [
+      {
+        id: "full-stack-intern",
+        title: "Full Stack Developer Intern",
+        type: "Internship",
+        duration: "May 2024 – Jul 2024",
+        responsibilities: [
+          "Developed modules for user management and appointment booking for a major physiotherapy chain.",
+          "Integrated Razorpay payments and implemented Cypress tests to reduce production bugs.",
+          "Deployed a scalable and cost-effective solution on DigitalOcean.",
+        ],
+        technologies: [
+          "Next.js",
+          "Express",
+          "MongoDB",
+          "Razorpay API",
+          "Cypress",
+          "DigitalOcean",
+        ],
+      },
+    ],
+  },
+  {
+    id: "gradeperfect",
+    company: "Gradeperfect",
+    logo: "🎓",
+    roles: [
+      {
+        id: "founding-team-member",
+        title: "Founding Team Member & Web Developer",
+        type: "Part-time",
+        duration: "Dec 2023 – Present",
+        isCurrent: true,
+        responsibilities: [
+          "Developed and maintained core web applications for the organization.",
+          "Automated workflows for attendance tracking, lead management, and invoicing.",
+          "Deployed MERN stack applications on DigitalOcean.",
+          "Integrated marketing tools via WordPress to improve engagement and conversions.",
+        ],
+        technologies: [
+          "MongoDB",
+          "Express",
+          "React",
+          "Node.js",
+          "DigitalOcean",
+          "WordPress",
+        ],
+      },
+      {
+        id: "computer-science-tutor",
+        title: "Computer Science Tutor",
+        type: "Part-time",
+        duration: "Mar 2024 – Nov 2024",
+        responsibilities: [
+          "Taught programming fundamentals, data structures, and algorithms to students.",
+          "Prepared lesson plans and exercises for Python and Computer Science concepts.",
+          "Mentored students in problem-solving and project development.",
+        ],
+        technologies: ["Python", "Computer Science Fundamentals"],
+      },
+    ],
+  },
 ];
-
 
 const ExperienceSection = () => {
   const [expandedRoles, setExpandedRoles] = useState<Set<string>>(
-    new Set(['senior-frontend'])
+    new Set(["founding-engineer-hp"])
   );
 
   const toggleRole = (roleId: string) => {
-    const newExpanded = new Set(expandedRoles);
-    if (newExpanded.has(roleId)) {
-      newExpanded.delete(roleId);
-    } else {
-      newExpanded.add(roleId);
-    }
-    setExpandedRoles(newExpanded);
+    setExpandedRoles((prev) => {
+      const next = new Set(prev);
+      if (next.has(roleId)) next.delete(roleId);
+      else next.add(roleId);
+      return next;
+    });
   };
 
-  // Check if any role in the company is current job
-  const hasCurrentJob = (roles: Experience['roles']) => {
-    return roles.some(role => role.isCurrentJob);
-  };
+  const hasCurrent = (roles: Role[]) => roles.some((r) => r.isCurrent);
 
   return (
     <div className="max-w-3xl w-full border-x border-border">
       <h2 className="border-b border-border text-3xl font-semibold px-4 text-foreground">
         Experience
       </h2>
-      <div className="space-y-6 p-3 sm:p-4">
-        {experiences.map((experience) => (
-          <div key={experience.id} className="space-y-4">
-            {/* Company Header */}
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">{experience.logo}</span>
-              <div className="flex items-center gap-2">
+
+      <div className="relative px-4 sm:px-6 py-8">
+        {/* Timeline spine */}
+        <div className="absolute left-[27px] sm:left-[33px] top-8 bottom-8 w-px bg-border" />
+
+        <div className="space-y-10">
+          {experiences.map((exp) => (
+            <div key={exp.id} className="relative pl-10 sm:pl-12">
+              {/* Timeline node */}
+              <div className="absolute left-0 sm:left-[6px] top-1 z-10 flex items-center justify-center w-6 h-6 rounded-full bg-background border-2 border-border text-sm">
+                {exp.logo}
+              </div>
+
+              {/* Company header */}
+              <div className="flex items-center gap-2 mb-3">
                 <h3 className="text-lg font-semibold text-foreground">
-                  {experience.company}
+                  {exp.company}
                 </h3>
-                {hasCurrentJob(experience.roles) && (
-                  <div className="relative">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full animate-wavy-flow"></div>
-                    <div className="absolute inset-0 w-2 h-2 bg-blue-400 rounded-full animate-ripple-wave opacity-75"></div>
-                    <div className="absolute inset-0 w-2 h-2 bg-blue-300 rounded-full animate-gentle-pulse" style={{ animationDelay: '1s' }}></div>
-                  </div>
+                {hasCurrent(exp.roles) && (
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  </span>
                 )}
               </div>
-            </div>
 
-            {/* Roles */}
-            <div className="space-y-3 ml-4 sm:ml-8">
-              {experience.roles.map((role) => (
-                <div key={role.id} className="border border-border rounded-lg overflow-hidden">
-                  {/* Role Header */}
-                  <button 
-                    className="flex items-center justify-between p-3 bg-muted/30 cursor-pointer hover:bg-muted/50 transition-colors w-full text-left focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 focus:ring-offset-background"
-                    onClick={() => toggleRole(role.id)}
-                    aria-expanded={expandedRoles.has(role.id)}
-                    aria-controls={`role-${role.id}-details`}
-                    aria-label={`Toggle ${role.title} details`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="text-muted-foreground">
-                        {role.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-foreground">{role.title}</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {role.type} | {role.duration}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      {expandedRoles.has(role.id) ? (
-                        <ChevronDown className="h-4 w-4" />
-                      ) : (
-                        <ChevronRight className="h-4 w-4" />
-                      )}
-                    </div>
-                  </button>
-
-                  {/* Role Details */}
-                  {expandedRoles.has(role.id) && (
-                    <div id={`role-${role.id}-details`} className="p-3 space-y-4">
-                      {/* Responsibilities */}
-                      <div>
-                        <h5 className="text-sm font-medium text-foreground mb-2">Responsibilities:</h5>
-                        <ul className="space-y-1">
-                          {role.responsibilities.map((responsibility, index) => (
-                            <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                              <span className="text-foreground mt-1">•</span>
-                              <span>
-                                {responsibility.split(' ').map((word, wordIndex) => {
-                                  if (['AI', 'Chat', 'Assistant', 'Whiteboards', 'Zalo', 'Mini', 'App', 'Dashboard'].includes(word)) {
-                                    return (
-                                      <span key={wordIndex} className="underline decoration-primary/50 underline-offset-2">
-                                        {word}{' '}
-                                      </span>
-                                    );
-                                  }
-                                  return word + ' ';
-                                })}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Technologies */}
-                      <div>
-                        <h5 className="text-sm font-medium text-foreground mb-2">Technologies:</h5>
-                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                          {role.technologies.map((tech, index) => (
-                            <span
-                              key={index}
-                              className="px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs bg-secondary text-secondary-foreground rounded-full border border-border"
-                            >
-                              {tech}
+              {/* Roles */}
+              <div className="space-y-3">
+                {exp.roles.map((role) => {
+                  const isOpen = expandedRoles.has(role.id);
+                  return (
+                    <div
+                      key={role.id}
+                      className="rounded-xl border border-border bg-muted/20 overflow-hidden transition-colors hover:border-muted-foreground/25"
+                    >
+                      <button
+                        onClick={() => toggleRole(role.id)}
+                        className="flex items-start justify-between gap-3 w-full p-3.5 text-left cursor-pointer"
+                      >
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="font-medium text-foreground text-[15px] leading-snug">
+                              {role.title}
                             </span>
-                          ))}
+                            {role.isCurrent && (
+                              <span className="shrink-0 text-[11px] font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                Current
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-muted-foreground mt-0.5 font-mono">
+                            {role.type} &middot; {role.duration}
+                          </p>
                         </div>
-                      </div>
+                        <motion.div
+                          animate={{ rotate: isOpen ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="shrink-0 mt-1 text-muted-foreground"
+                        >
+                          <ChevronDown className="h-4 w-4" />
+                        </motion.div>
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                          >
+                            <div className="px-3.5 pb-4 space-y-3 border-t border-border pt-3">
+                              {role.responsibilities.length > 0 && (
+                                <ul className="space-y-1.5">
+                                  {role.responsibilities.map((item, i) => (
+                                    <li
+                                      key={i}
+                                      className="text-sm text-muted-foreground flex gap-2 leading-relaxed"
+                                    >
+                                      <span className="shrink-0 text-muted-foreground/60 select-none">
+                                        ›
+                                      </span>
+                                      <span>{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+
+                              {role.technologies.length > 0 && (
+                                <div className="flex flex-wrap gap-1.5 pt-1">
+                                  {role.technologies.map((tech, i) => (
+                                    <span
+                                      key={i}
+                                      className="px-2 py-0.5 text-xs font-mono rounded-md bg-secondary text-secondary-foreground border border-border"
+                                    >
+                                      {tech}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
-                  )}
-                </div>
-              ))}
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
