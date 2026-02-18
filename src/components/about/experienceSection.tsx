@@ -188,15 +188,15 @@ const ExperienceSection = () => {
         Experience
       </h2>
 
-      <div className="relative px-4 sm:px-6 py-8">
-        {/* Timeline spine */}
-        <div className="absolute left-[27px] sm:left-[33px] top-8 bottom-8 w-px bg-border" />
+      <div className="relative px-4 py-8">
+        {/* Timeline spine — centered on the 24px node: px-4 (16px) + 12px = 28px */}
+        <div className="absolute left-7 top-8 bottom-8 w-px bg-border" />
 
         <div className="space-y-10">
           {experiences.map((exp) => (
-            <div key={exp.id} className="relative pl-10 sm:pl-12">
+            <div key={exp.id} className="relative pl-10">
               {/* Timeline node */}
-              <div className="absolute left-0 sm:left-[6px] top-1 z-10 flex items-center justify-center w-6 h-6 rounded-full bg-background border-2 border-border text-sm">
+              <div className="absolute left-0 top-1 z-10 flex items-center justify-center w-6 h-6 rounded-full bg-background border-2 border-border text-sm">
                 {exp.logo}
               </div>
 
