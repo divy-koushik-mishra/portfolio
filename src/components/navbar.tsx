@@ -25,11 +25,39 @@ const Navbar = () => {
 
   const menuItems = [
     { id: 1, title: "Portfolio", href: "/", active: pathname === "/" },
-    { id: 2, title: "Blog", href: "/blogs", active: pathname === "/blogs" },
-    { id: 3, title: "Projects", href: "/", active: false },
+    // { id: 2, title: "Blog", href: "/blogs", active: pathname === "/blogs" },
+    // { id: 3, title: "Projects", href: "/", active: false },
   ];
 
+  const playClickSound = () => {
+    const ctx = new AudioContext();
+
+    const buffer = ctx.createBuffer(1, ctx.sampleRate * 0.03, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) {
+      const t = i / ctx.sampleRate;
+      data[i] =
+        (Math.random() * 2 - 1) * Math.exp(-t * 300) * 0.15 +
+        Math.sin(2 * Math.PI * 2400 * t) * Math.exp(-t * 400) * 0.1;
+    }
+
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+
+    const gain = ctx.createGain();
+    gain.gain.value = 0.25;
+
+    const hp = ctx.createBiquadFilter();
+    hp.type = "highpass";
+    hp.frequency.value = 1200;
+
+    src.connect(hp).connect(gain).connect(ctx.destination);
+    src.start();
+    src.onended = () => ctx.close();
+  };
+
   const handleThemeToggle = () => {
+    playClickSound();
     toggleTheme();
   };
 
