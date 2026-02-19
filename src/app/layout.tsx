@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/theme-context";
 import FooterSection from "@/components/footer";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const SITE_URL = "https://divykoushik.in";
 
@@ -167,6 +168,7 @@ export default function RootLayout({
     <html lang="en" className="light">
       <head>
         <JsonLd />
+        <GoogleAnalytics />
       </head>
       <body
         className={` antialiased selection:bg-foreground selection:text-background`}
