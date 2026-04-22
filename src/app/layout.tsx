@@ -9,11 +9,11 @@ const SITE_URL = "https://divykoushik.in";
 
 export const metadata: Metadata = {
   title: {
-    default: "Divy Koushik Mishra — Full-Stack Developer & Founding Engineer",
+    default: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
     template: "%s | Divy Koushik Mishra",
   },
   description:
-    "Full-Stack Developer and Founding Engineer specializing in React, Next.js, TypeScript, and scalable product development. Available for freelance, consulting, and full-time roles. Built MVPs that secured VC funding.",
+    "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript products for startups — MVPs, web apps, mobile.",
   keywords: [
     "Divy Koushik Mishra",
     "Full-Stack Developer",
@@ -48,15 +48,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Divy Koushik Mishra",
-    title: "Divy Koushik Mishra — Full-Stack Developer & Founding Engineer",
+    title: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
     description:
-      "Full-Stack Developer and Founding Engineer specializing in React, Next.js, TypeScript, and scalable product development. Available for freelance, consulting, and full-time roles.",
+      "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript products for startups — MVPs, web apps, mobile.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Divy Koushik Mishra — Full-Stack Developer & Founding Engineer",
+    title: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
     description:
-      "Full-Stack Developer and Founding Engineer. React, Next.js, TypeScript. Available for freelance & consulting.",
+      "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript for startups.",
     creator: "@divy_koushik",
   },
   robots: {
@@ -80,15 +80,18 @@ function JsonLd() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: "Divy Koushik Mishra",
     url: SITE_URL,
+    image: `${SITE_URL}/divy-koushik.webp`,
     email: "divykoushikmishra@gmail.com",
     jobTitle: "Full-Stack Developer & Founding Engineer",
     description:
-      "Full-Stack Developer and Founding Engineer specializing in React, Next.js, TypeScript, and scalable product development. Available for freelance, consulting, and full-time roles.",
+      "Full-Stack Developer & Founding Engineer in Gurugram, India. Building React, Next.js, and TypeScript products for startups.",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Gurgaon",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
       addressCountry: "IN",
     },
     alumniOf: {
@@ -121,7 +124,7 @@ function JsonLd() {
       "https://github.com/divy-koushik-mishra/",
       "https://www.linkedin.com/in/divy-koushik-mishra",
       "https://x.com/divy_koushik",
-      "https://www.instagram.com/divy.koushik.mishra/",
+      "https://www.instagram.com/divy_koushik_mishra/",
     ],
     worksFor: [
       {
@@ -132,16 +135,23 @@ function JsonLd() {
     ],
   };
 
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    dateCreated: "2025-02-18",
+    dateModified: new Date().toISOString(),
+    mainEntity: personSchema,
+  };
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Divy Koushik Mishra",
     url: SITE_URL,
     description:
-      "Portfolio of Divy Koushik Mishra — Full-Stack Developer and Founding Engineer available for freelance, consulting, and full-time roles.",
+      "Portfolio of Divy Koushik Mishra — Full-Stack Developer & Founding Engineer based in Gurugram, India.",
     author: {
-      "@type": "Person",
-      name: "Divy Koushik Mishra",
+      "@id": `${SITE_URL}/#person`,
     },
   };
 
@@ -149,7 +159,7 @@ function JsonLd() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
       <script
         type="application/ld+json"

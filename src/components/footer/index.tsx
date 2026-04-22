@@ -12,8 +12,7 @@ const FooterSection = () => {
 
   const quickLinks = [
     { name: "Portfolio", href: "/" },
-    { name: "Blog", href: "/blogs" },
-    { name: "Resume", href: "/" },
+    { name: "Library", href: "/library" },
   ];
 
   const contactInfo = [
@@ -24,7 +23,7 @@ const FooterSection = () => {
     },
     {
       icon: <MapPin size={16} />,
-      text: "Gurgaon, India · Open to remote",
+      text: "Gurugram, India · Building for the world",
       href: "#",
     },
   ];

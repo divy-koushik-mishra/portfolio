@@ -13,11 +13,12 @@ const AboutSection = () => {
           <div className="font-mono space-y-4 px-4 py-6 text-[15px] leading-relaxed text-foreground">
             <p>
               I&apos;m <strong>Divy Koushik Mishra</strong> — a{" "}
-              <strong>full-stack developer</strong> who helps startups and
-              businesses go from idea to shipped product. I&apos;ve been the{" "}
-              <strong>first technical hire</strong> at two startups, building
-              MVPs that <strong>secured VC funding</strong> and scaled to
-              thousands of users.
+              <strong>full-stack developer</strong> based in{" "}
+              <strong>Gurugram&apos;s startup ecosystem</strong>, helping
+              startups and businesses go from idea to shipped product. I&apos;ve
+              been the <strong>first technical hire</strong> at two startups,
+              building MVPs that <strong>secured VC funding</strong> and scaled
+              to thousands of users.
             </p>
 
             <p>
@@ -33,6 +34,12 @@ const AboutSection = () => {
               If you need someone who can <strong>own the technical side</strong>{" "}
               of your product — from writing the first line of code to deploying
               it at scale — let&apos;s talk.
+            </p>
+
+            <p>
+              When I&apos;m not shipping code, I&apos;m studying startup
+              frameworks, getting humbled at chess, or curating my fragrance
+              collection.
             </p>
           </div>
         </div>

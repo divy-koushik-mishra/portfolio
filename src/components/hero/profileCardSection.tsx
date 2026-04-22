@@ -18,11 +18,11 @@ const VerifiedIcon = () => (
 );
 
 const professionalTitles = [
-  "Full-Stack Developer — Available for Freelance",
+  "Founding Engineer — Building systems, curating taste.",
   "I build MVPs that secure funding",
-  "End-to-end: idea → design → ship → scale",
+  "First technical hire at two startups",
+  "Idea → design → ship → scale",
   "React · Next.js · React Native · AWS",
-  "Founding engineer at two startups",
 ];
 
 const ProfileCardSection = () => {
@@ -73,18 +73,21 @@ const ProfileCardSection = () => {
       </div>
       {/* text part */}
       <div className="flex flex-col flex-1 min-w-0">
-        <div className="w-full flex grow items-end bg-[repeating-linear-gradient(315deg,var(--color-muted)_0,var(--color-muted)_1px,transparent_0,transparent_50%)] bg-[length:10px_10px]">
-          <div className="line-clamp-1 font-mono text-xs text-muted-foreground select-none max-sm:hidden px-1">
-            text-3xl{" "}
-            <span className="inline dark:hidden">text-foreground</span>
-            <span className="hidden dark:inline">text-foreground</span>{" "}
-            font-medium
+        <div className="w-full flex grow items-end bg-[repeating-linear-gradient(315deg,var(--color-muted)_0,var(--color-muted)_1px,transparent_0,transparent_50%)] bg-[length:10px_10px] min-w-0">
+          <div className="font-mono text-[10px] sm:text-xs text-muted-foreground select-none px-1 flex items-center gap-1.5 min-w-0 whitespace-nowrap overflow-hidden">
+            <span className="text-cyan-500/80 hidden sm:inline">~/portfolio</span>
+            <span className="text-emerald-500">❯</span>
+            <span className="truncate">npx create-mvp@latest</span>
+            <span
+              aria-hidden="true"
+              className="terminal-cursor inline-block w-[6px] h-3 bg-muted-foreground translate-y-[1px] shrink-0"
+            />
           </div>
         </div>
         <div className="border-y border-b border-border w-full">
-          <div className="text-xl sm:text-3xl font-semibold px-3 sm:px-4 py-1 flex items-center relative w-fit text-card-foreground">
+          <h1 className="text-xl sm:text-3xl font-semibold px-3 sm:px-4 py-1 flex items-center relative w-fit text-card-foreground">
             Divy Koushik Mishra <VerifiedIcon />{" "}
-          </div>
+          </h1>
         </div>
         <div className="px-3 sm:px-4 py-1 overflow-hidden">
           <TextChangingUpwards texts={professionalTitles} />

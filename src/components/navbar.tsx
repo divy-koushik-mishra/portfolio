@@ -26,8 +26,7 @@ const Navbar = () => {
 
   const menuItems = [
     { id: 1, title: "Portfolio", href: "/", active: pathname === "/" },
-    // { id: 2, title: "Blog", href: "/blogs", active: pathname === "/blogs" },
-    // { id: 3, title: "Projects", href: "/", active: false },
+    { id: 2, title: "Library", href: "/library", active: pathname === "/library" },
   ];
 
   const playClickSound = () => {

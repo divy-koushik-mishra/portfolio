@@ -19,7 +19,7 @@ const TextChangingUpwards: FC<TextChangingUpwardsProps> = ({ texts }) => {
   }, [texts.length]);
 
   return (
-    <div className="text-muted-foreground text-sm overflow-hidden">
+    <div className="text-muted-foreground text-sm overflow-hidden h-5 sm:h-6 leading-5 sm:leading-6">
       <AnimatePresence mode="wait">
         <motion.span
           key={texts[index]}
@@ -27,7 +27,7 @@ const TextChangingUpwards: FC<TextChangingUpwardsProps> = ({ texts }) => {
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="block"
+          className="block whitespace-nowrap overflow-hidden text-ellipsis"
         >
           {texts[index]}
         </motion.span>

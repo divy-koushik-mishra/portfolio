@@ -28,7 +28,7 @@ const BioSection = () => {
     {
       id: 3,
       icon: <MapPin className="size-4 text-muted-foreground" />,
-      text: "Gurgaon, India · Open to remote",
+      text: "Gurugram, India · Building for the world",
     },
     {
       id: 4,
