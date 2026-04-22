@@ -148,6 +148,9 @@ function JsonLd() {
     dateCreated: "2025-02-18",
     dateModified: new Date().toISOString(),
     mainEntity: personSchema,
+    author: { "@id": `${SITE_URL}/#person` },
+    url: SITE_URL,
+    name: "Divy Koushik Mishra — Profile",
   };
 
   const websiteSchema = {
@@ -192,7 +195,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <FooterSection />
         </ThemeProvider>
       </body>
