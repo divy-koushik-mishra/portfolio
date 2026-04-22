@@ -8,78 +8,88 @@ type Book = {
   author: string;
   status: BookStatus;
   note: string;
-  finishedOn?: string;
 };
 
-// TODO: replace with real entries
 const books: Book[] = [
   {
-    title: "The Mom Test",
-    author: "Rob Fitzpatrick",
+    title: "12 Years",
+    author: "Chetan Bhagat",
     status: "reading",
-    note: "Rereading before customer interviews. The anti-patterns are painfully familiar.",
+    note: "Sometimes the brain needs to clear its cache and step away from system architectures. A nostalgic, guilty-pleasure read to reset the system.",
   },
   {
-    title: "Working in Public",
-    author: "Nadia Eghbal",
-    status: "finished",
-    finishedOn: "2026-02",
-    note: "Changed how I think about open source as production infrastructure vs. community.",
-  },
-  {
-    title: "Tiny Experiments",
-    author: "Anne-Laure Le Cunff",
+    // TODO: confirm title — inferred from the "universe is mostly absurd" line
+    title: "The Myth of Sisyphus",
+    author: "Albert Camus",
     status: "paused",
-    note: "Good framework, drifted off somewhere around chapter four.",
+    note: "A much-needed break from startup frameworks. A good reminder that the universe is mostly absurd anyway. Will return to it.",
   },
 ];
 
-const statusLabel: Record<BookStatus, string> = {
-  reading: "Reading",
-  finished: "Finished",
-  paused: "Paused",
-};
-
-const statusAccent: Record<BookStatus, string> = {
-  reading: "text-emerald-500",
-  finished: "text-muted-foreground",
-  paused: "text-amber-500",
+const statusMeta: Record<
+  BookStatus,
+  { label: string; dot: string; text: string }
+> = {
+  reading: {
+    label: "READING",
+    dot: "bg-emerald-500",
+    text: "text-emerald-500",
+  },
+  finished: {
+    label: "FINISHED",
+    dot: "bg-muted-foreground",
+    text: "text-muted-foreground",
+  },
+  paused: {
+    label: "PAUSED",
+    dot: "bg-amber-500",
+    text: "text-amber-500",
+  },
 };
 
 const CurrentReads = () => {
   return (
     <section className="w-full flex items-center flex-col">
       <div className="max-w-3xl w-full border-x border-border">
-        <h2 className="border-b border-border text-3xl font-semibold px-4 text-foreground flex items-center gap-3">
-          <BookOpen size={22} className="text-muted-foreground" />
-          Current Reads
-        </h2>
-        <div className="p-4 sm:p-6 space-y-4">
-          {books.map((book) => (
-            <div
-              key={book.title}
-              className="rounded-xl border border-border p-4 space-y-1.5 bg-muted/20"
-            >
-              <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                <h3 className="font-semibold text-foreground text-[15px]">
-                  {book.title}
-                </h3>
-                <span
-                  className={`text-[11px] font-mono uppercase tracking-wide ${statusAccent[book.status]}`}
-                >
-                  {statusLabel[book.status]}
-                  {book.finishedOn ? ` · ${book.finishedOn}` : ""}
-                </span>
-              </div>
-              <p className="text-sm font-mono text-muted-foreground">
-                {book.author}
-              </p>
-              <p className="text-sm text-foreground/80 leading-relaxed font-mono">
-                {book.note}
-              </p>
-            </div>
-          ))}
+        <div className="border-b border-border px-4 py-3 flex items-baseline justify-between">
+          <h2 className="text-3xl font-semibold text-foreground flex items-center gap-3">
+            <BookOpen size={22} className="text-muted-foreground" />
+            Books
+          </h2>
+          <span className="font-mono text-xs text-muted-foreground">
+            {books.length.toString().padStart(2, "0")} entries
+          </span>
         </div>
+        <ul className="divide-y divide-border">
+          {books.map((book) => {
+            const meta = statusMeta[book.status];
+            return (
+              <li
+                key={book.title}
+                className="px-4 py-4 sm:px-6 hover:bg-muted/30 transition-colors"
+              >
+                <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide mb-1.5">
+                  <span
+                    className={`inline-block size-1.5 rounded-full ${meta.dot}`}
+                    aria-hidden="true"
+                  />
+                  <span className={meta.text}>{meta.label}</span>
+                </div>
+                <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                  <h3 className="font-semibold text-foreground text-[15px] leading-snug">
+                    {book.title}
+                  </h3>
+                  <span className="font-mono text-xs text-muted-foreground">
+                    {book.author}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-sm text-foreground/80 leading-relaxed font-mono">
+                  {book.note}
+                </p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

@@ -19,46 +19,50 @@ const ChessStatus = () => {
   return (
     <section className="w-full flex items-center flex-col">
       <div className="max-w-3xl w-full border-x border-border">
-        <h2 className="border-b border-border text-3xl font-semibold px-4 text-foreground flex items-center gap-3">
-          <Crown size={22} className="text-muted-foreground" />
-          Chess
-        </h2>
-        <div className="p-4 sm:p-6 space-y-4">
-          <div className="rounded-xl border border-border p-4 space-y-3 bg-muted/20">
-            <div className="flex items-baseline justify-between gap-3 flex-wrap">
-              <h3 className="font-semibold text-foreground text-[15px]">
-                {chess.platform} · @{chess.username}
-              </h3>
-              <a
-                href={chess.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] font-mono uppercase tracking-wide text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
-              >
-                Profile
-                <ExternalLink size={11} />
-              </a>
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {chess.ratings.map((r) => (
+        <div className="border-b border-border px-4 py-3 flex items-baseline justify-between">
+          <h2 className="text-3xl font-semibold text-foreground flex items-center gap-3">
+            <Crown size={22} className="text-muted-foreground" />
+            Chess
+          </h2>
+          <a
+            href={chess.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
+          >
+            {chess.platform}/@{chess.username}
+            <ExternalLink size={11} />
+          </a>
+        </div>
+        <div className="px-4 py-5 sm:px-6 space-y-4">
+          <div className="grid grid-cols-3 gap-2">
+            {chess.ratings.map((r) => {
+              const isPreferred = r.format === chess.preferredFormat;
+              return (
                 <div
                   key={r.format}
-                  className="rounded-lg border border-border p-3 bg-background"
+                  className={`rounded-lg border p-3 ${
+                    isPreferred
+                      ? "border-foreground/40 bg-muted/30"
+                      : "border-border bg-muted/10"
+                  }`}
                 >
-                  <div className="text-[10px] font-mono uppercase tracking-wide text-muted-foreground">
+                  <div className="text-[10px] font-mono uppercase tracking-wide text-muted-foreground flex items-center gap-1">
                     {r.format}
-                    {r.format === chess.preferredFormat ? " ·" : ""}
+                    {isPreferred && (
+                      <span className="text-emerald-500">●</span>
+                    )}
                   </div>
-                  <div className="text-xl font-semibold text-foreground font-mono">
+                  <div className="text-2xl font-semibold text-foreground font-mono leading-tight">
                     {r.rating}
                   </div>
                 </div>
-              ))}
-            </div>
-            <p className="text-sm text-foreground/80 leading-relaxed font-mono">
-              {chess.milestone}
-            </p>
+              );
+            })}
           </div>
+          <p className="text-sm text-foreground/80 leading-relaxed font-mono">
+            {chess.milestone}
+          </p>
         </div>
       </div>
     </section>

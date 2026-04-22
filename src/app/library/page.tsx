@@ -39,13 +39,20 @@ export default function LibraryPage() {
       />
       <section className="w-full flex items-center flex-col">
         <div className="max-w-3xl w-full border-x border-border">
-          <h1 className="border-b border-border text-3xl font-semibold px-4 text-foreground">
-            Library
-          </h1>
-          <div className="p-4 sm:p-6 font-mono space-y-4 text-[15px] leading-relaxed text-foreground">
+          <div className="border-b border-border px-4 py-3 flex items-baseline justify-between">
+            <h1 className="text-3xl font-semibold text-foreground">Library</h1>
+            <span className="font-mono text-xs text-muted-foreground">
+              books · fragrances · chess
+            </span>
+          </div>
+          <div className="p-4 sm:p-6 font-mono space-y-3 text-[15px] leading-relaxed text-foreground">
             <p>
-              A running log of what I&apos;m reading, wearing, and playing
-              outside of code. Updated when the rotation changes.
+              A curated, ever-evolving log of what I&apos;m reading, wearing,
+              and playing outside of code.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Updated when the rotation changes. Opinions are my own and
+              enthusiastic.
             </p>
           </div>
         </div>
