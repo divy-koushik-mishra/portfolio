@@ -1,7 +1,9 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import DiagonalLineGradientBgFull from '../hero/diagonalLineGradientBgFull'
-import StackSection from './stackSection'
-import ExperienceSection from './experienceSection'
+
+const ExperienceSection = dynamic(() => import('./experienceSection'))
+const StackSection = dynamic(() => import('./stackSection'))
 
 const AboutSection = () => {
   return (

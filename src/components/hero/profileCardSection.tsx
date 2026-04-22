@@ -67,7 +67,10 @@ const ProfileCardSection = () => {
           src={"/divy-koushik.webp"}
           width={160}
           height={160}
-          alt="profile-img"
+          alt="Divy Koushik Mishra"
+          priority
+          fetchPriority="high"
+          sizes="(max-width: 640px) 96px, 160px"
           className="rounded-full ring-1 ring-offset-2 ring-border size-24 sm:size-40"
         />
       </div>

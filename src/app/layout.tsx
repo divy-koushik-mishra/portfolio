@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/theme-context";
 import FooterSection from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+});
 
 const SITE_URL = "https://divykoushik.in";
 
@@ -175,13 +182,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className={`light ${geistMono.variable}`}>
       <head>
         <JsonLd />
         <GoogleAnalytics />
       </head>
       <body
-        className={` antialiased selection:bg-foreground selection:text-background`}
+        className={`antialiased selection:bg-foreground selection:text-background`}
       >
         <ThemeProvider>
           <Navbar />
