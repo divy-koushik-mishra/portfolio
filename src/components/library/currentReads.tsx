@@ -12,15 +12,26 @@ type Book = {
 
 const books: Book[] = [
   {
+    title: "BuildIt",
+    author: "Albinder Dhindsa",
+    status: "reading",
+    note: "Getting an 'Indian version of Hard Thing About Hard Things' vibe from this. Reading to understand the pure chaos behind the scale.",
+  },
+  {
     title: "12 Years",
     author: "Chetan Bhagat",
     status: "reading",
     note: "Sometimes the brain needs to clear its cache and step away from system architectures. A nostalgic, guilty-pleasure read to reset the system.",
   },
   {
-    // TODO: confirm title — inferred from the "universe is mostly absurd" line
-    title: "The Myth of Sisyphus",
-    author: "Albert Camus",
+    title: "The Hard Thing About Hard Things",
+    author: "Ben Horowitz",
+    status: "finished",
+    note: "The definitive guide to wartime building. Required reading for anyone who thinks startups are just ping-pong tables and easy funding rounds.",
+  },
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    author: "Douglas Adams",
     status: "paused",
     note: "A much-needed break from startup frameworks. A good reminder that the universe is mostly absurd anyway. Will return to it.",
   },
