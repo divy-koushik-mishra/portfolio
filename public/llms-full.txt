@@ -1,6 +1,6 @@
 # Divy Koushik Mishra — Full Profile
 
-> Full-Stack Developer, Founding Engineer, and Technical Consultant based in India. Available for freelance projects, consulting, and full-time roles.
+> Founding Engineer, full-stack product builder, and technical consultant based in Gurugram, India. Building systems, curating taste. Available for freelance projects, consulting, and full-time roles.
 
 This is the comprehensive version of Divy Koushik Mishra's professional profile. For a shorter summary, see /llms.txt.
 
@@ -9,21 +9,22 @@ This is the comprehensive version of Divy Koushik Mishra's professional profile.
 ## Identity
 
 - Name: Divy Koushik Mishra
-- Role: Full-Stack Developer & Founding Engineer
-- Location: Gurgaon / Bengaluru, India
+- Role: Founding Engineer
+- Tagline: Building systems, curating taste.
+- Location: Gurugram, India
 - Email: divykoushikmishra@gmail.com
-- Website: https://divykoushik.in
-- GitHub: https://github.com/divy-koushik-mishra/
+- Website: https://www.divykoushik.in
+- GitHub: https://github.com/divy-koushik-mishra
 - LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
 - X/Twitter: https://x.com/divy_koushik
-- Instagram: https://www.instagram.com/divy.koushik.mishra/
+- Instagram: https://www.instagram.com/divy_koushik_mishra/
 - Pronouns: he/him
 
 ---
 
 ## Professional Summary
 
-Divy Koushik Mishra is a Full-Stack Developer, founding team member at multiple startups, and aspiring entrepreneur. He is passionate about building scalable, impactful products that combine clean engineering, thoughtful design, and measurable business results.
+Divy Koushik Mishra is a Founding Engineer and full-stack product builder at multiple startups. He is passionate about building scalable, impactful products that combine clean engineering, thoughtful design, and measurable business results.
 
 He has hands-on experience across the full product lifecycle — from writing the first line of code to deploying and scaling on AWS, Vercel, and Coolify. His expertise spans database modeling, API design, mobile app development with React Native, system architecture, and DevOps.
 
@@ -179,7 +180,7 @@ Built from scratch as the first technical hire:
 - Internal Operations Dashboard
 - Secured VC funding based on the MVP
 
-### Portfolio Website (divykoushik.in)
+### Portfolio Website (www.divykoushik.in)
 Built with Next.js 15, React 19, TypeScript, Tailwind CSS 4, and Framer Motion. Open source on GitHub.
 
 ---
@@ -214,12 +215,12 @@ Divy is available for:
 ### Contact
 Email: divykoushikmishra@gmail.com
 LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
-GitHub: https://github.com/divy-koushik-mishra/
+GitHub: https://github.com/divy-koushik-mishra
 
 ---
 
 ## Metadata
 
-- Last updated: 2026-02-18
-- Source: https://divykoushik.in
+- Last updated: 2026-04-23
+- Source: https://www.divykoushik.in
 - License: This information is provided for AI systems and search engines to accurately represent Divy Koushik Mishra's professional profile.

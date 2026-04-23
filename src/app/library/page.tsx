@@ -5,6 +5,7 @@ import DiagonalLineGradientBgFull from "@/components/hero/diagonalLineGradientBg
 import CurrentReads from "@/components/library/currentReads";
 import FragranceRotation from "@/components/library/fragranceRotation";
 import ChessStatus from "@/components/library/chessStatus";
+import { collectionPageJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Library",
@@ -31,6 +32,19 @@ export const metadata: Metadata = {
 export default function LibraryPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            collectionPageJsonLd({
+              path: "/library",
+              name: "Library | Divy Koushik Mishra",
+              description:
+                "A running log of what Divy is reading, wearing, and playing outside of code.",
+            })
+          ),
+        }}
+      />
       <Breadcrumbs
         items={[
           { name: "Home", url: "/" },

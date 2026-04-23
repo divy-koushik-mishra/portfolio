@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Divy Koushik Mishra — Full-Stack Developer in Gurugram";
+export const alt = "Divy Koushik Mishra — Founding Engineer in Gurugram";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -53,7 +53,7 @@ export default async function OpenGraphImage() {
               marginTop: 8,
             }}
           >
-            Full-Stack Developer in Gurugram
+            Founding Engineer in Gurugram
           </div>
         </div>
 

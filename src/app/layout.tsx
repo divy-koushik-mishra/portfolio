@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/contexts/theme-context";
 import FooterSection from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
+import { websiteJsonLd, SITE_URL } from "@/lib/jsonld";
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
@@ -12,19 +13,17 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://divykoushik.in";
-
 export const metadata: Metadata = {
   title: {
-    default: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
+    default: "Divy Koushik Mishra — Founding Engineer in Gurugram",
     template: "%s | Divy Koushik Mishra",
   },
   description:
-    "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript products for startups — MVPs, web apps, mobile.",
+    "Founding Engineer. Full-stack product builder in Gurugram, India. Building systems and curating taste — MVPs that ship, React, Next.js, TypeScript.",
   keywords: [
     "Divy Koushik Mishra",
-    "Full-Stack Developer",
     "Founding Engineer",
+    "Full-Stack Developer",
     "React Developer",
     "Next.js Developer",
     "TypeScript Developer",
@@ -55,15 +54,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Divy Koushik Mishra",
-    title: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
+    title: "Divy Koushik Mishra — Founding Engineer in Gurugram",
     description:
-      "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript products for startups — MVPs, web apps, mobile.",
+      "Founding Engineer. Full-stack product builder in Gurugram, India. Building systems and curating taste — MVPs that ship, React, Next.js, TypeScript.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Divy Koushik Mishra — Full-Stack Developer in Gurugram",
+    title: "Divy Koushik Mishra — Founding Engineer in Gurugram",
     description:
-      "Full-Stack Developer & Founding Engineer in Gurugram, India. I build React, Next.js, and TypeScript for startups.",
+      "Founding Engineer. Full-stack product builder in Gurugram. Building systems and curating taste.",
     creator: "@divy_koushik",
   },
   robots: {
@@ -79,103 +78,16 @@ export const metadata: Metadata = {
   },
   other: {
     "ai-content-declaration":
-      "This site contains human-authored content about Divy Koushik Mishra, a Full-Stack Developer available for hire.",
+      "This site contains human-authored content about Divy Koushik Mishra, a Founding Engineer based in Gurugram, India.",
   },
 };
 
 function JsonLd() {
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": `${SITE_URL}/#person`,
-    name: "Divy Koushik Mishra",
-    url: SITE_URL,
-    image: `${SITE_URL}/divy-koushik.webp`,
-    email: "divykoushikmishra@gmail.com",
-    jobTitle: "Full-Stack Developer & Founding Engineer",
-    description:
-      "Full-Stack Developer & Founding Engineer in Gurugram, India. Building React, Next.js, and TypeScript products for startups.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Gurugram",
-      addressRegion: "Haryana",
-      addressCountry: "IN",
-    },
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Indian Institute of Technology, Madras",
-    },
-    knowsAbout: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "Node.js",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
-      "MongoDB",
-      "Prisma",
-      "tRPC",
-      "AWS",
-      "Docker",
-      "React Native",
-      "System Architecture",
-      "Full-Stack Development",
-      "MVP Development",
-      "Startup Engineering",
-      "UI/UX Design",
-      "DevOps",
-    ],
-    sameAs: [
-      "https://github.com/divy-koushik-mishra/",
-      "https://www.linkedin.com/in/divy-koushik-mishra",
-      "https://x.com/divy_koushik",
-      "https://www.instagram.com/divy_koushik_mishra/",
-    ],
-    worksFor: [
-      {
-        "@type": "Organization",
-        name: "HandyPanda",
-        url: "https://www.handypanda.in",
-      },
-    ],
-  };
-
-  const profilePageSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    dateCreated: "2025-02-18",
-    dateModified: new Date().toISOString(),
-    mainEntity: personSchema,
-    author: { "@id": `${SITE_URL}/#person` },
-    url: SITE_URL,
-    name: "Divy Koushik Mishra — Profile",
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Divy Koushik Mishra",
-    url: SITE_URL,
-    description:
-      "Portfolio of Divy Koushik Mishra — Full-Stack Developer & Founding Engineer based in Gurugram, India.",
-    author: {
-      "@id": `${SITE_URL}/#person`,
-    },
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+    />
   );
 }
 

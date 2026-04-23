@@ -1,10 +1,10 @@
 # Divy Koushik Mishra
 
-> Full-Stack Developer, Founding Engineer, and Technical Consultant based in India. Available for freelance projects, consulting, and full-time roles.
+> Founding Engineer, full-stack product builder, and technical consultant based in Gurugram, India. Building systems, curating taste. Available for freelance projects, consulting, and full-time roles.
 
 ## About
 
-Divy Koushik Mishra is a Full-Stack Developer and founding team member at multiple startups. He specializes in building scalable, production-ready applications from concept to launch. He has experience as the first technical hire at early-stage startups, building MVPs that secured VC funding, and leading end-to-end product development.
+Divy Koushik Mishra is a Founding Engineer and full-stack product builder. He specializes in building scalable, production-ready applications from concept to launch. He has experience as the first technical hire at early-stage startups, building MVPs that secured VC funding, and leading end-to-end product development.
 
 ## Current Roles
 
@@ -60,10 +60,11 @@ Developed core web applications. Automated workflows for attendance tracking, le
 ## Contact
 
 - Email: divykoushikmishra@gmail.com
-- Website: https://divykoushik.in
-- GitHub: https://github.com/divy-koushik-mishra/
+- Website: https://www.divykoushik.in
+- GitHub: https://github.com/divy-koushik-mishra
 - LinkedIn: https://www.linkedin.com/in/divy-koushik-mishra
 - X/Twitter: https://x.com/divy_koushik
+- Instagram: https://www.instagram.com/divy_koushik_mishra/
 
 ## Hiring
 
@@ -72,6 +73,6 @@ Divy is available for freelance work, contract projects, technical consulting, a
 ## Links
 
 - [Full LLM context](/llms-full.txt)
-- [Portfolio](https://divykoushik.in)
-- [GitHub](https://github.com/divy-koushik-mishra/)
+- [Portfolio](https://www.divykoushik.in)
+- [GitHub](https://github.com/divy-koushik-mishra)
 - [LinkedIn](https://www.linkedin.com/in/divy-koushik-mishra)

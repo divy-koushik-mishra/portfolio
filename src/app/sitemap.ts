@@ -1,32 +1,20 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://divykoushik.in";
+const SITE_URL = "https://www.divykoushik.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE_URL,
-      lastModified: new Date(),
+      lastModified: new Date("2026-04-22"),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${SITE_URL}/library`,
-      lastModified: new Date(),
+      lastModified: new Date("2026-04-19"),
       changeFrequency: "monthly",
       priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/llms.txt`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/llms-full.txt`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
     },
   ];
 }
